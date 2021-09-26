@@ -81,5 +81,8 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="text_not_collected">Não coletados</string>
     <string name="text_itens_coletados">Itens coletados</string>
+    <string name="collected">Coletado</string>
+    <string name="text_todos">Todos</string>
+    <string name="texttodos_os_itens">Todos os itens</string>
 
 </resources>

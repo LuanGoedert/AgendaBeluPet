@@ -62,6 +62,12 @@ class AgendaFragment : Fragment() {
         val items = WeekDaysString()
         val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items.loadWeekDays())
 
+        viewModel.weekDay.observe(viewLifecycleOwner){
+            it?.let {
+                viewModel.viewModelScope.launch { viewModel.getDogsFromDatabase(it) }
+            }
+        }
+
         (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(adapter)
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){

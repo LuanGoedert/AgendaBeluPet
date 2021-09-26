@@ -4,6 +4,7 @@ package com.example.agendabelupet.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,12 +38,16 @@ public abstract class FragmentAgendaBinding extends ViewDataBinding {
   @NonNull
   public final TextInputLayout selectWeekDay;
 
+  @NonNull
+  public final AutoCompleteTextView teste;
+
   @Bindable
   protected AgendaViewModel mViewModel;
 
   protected FragmentAgendaBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button button, Button buttonSeeProfit, ConstraintLayout consTop,
-      ConstraintLayout constraintLayout, RecyclerView recyclerWeek, TextInputLayout selectWeekDay) {
+      ConstraintLayout constraintLayout, RecyclerView recyclerWeek, TextInputLayout selectWeekDay,
+      AutoCompleteTextView teste) {
     super(_bindingComponent, _root, _localFieldCount);
     this.button = button;
     this.buttonSeeProfit = buttonSeeProfit;
@@ -50,6 +55,7 @@ public abstract class FragmentAgendaBinding extends ViewDataBinding {
     this.constraintLayout = constraintLayout;
     this.recyclerWeek = recyclerWeek;
     this.selectWeekDay = selectWeekDay;
+    this.teste = teste;
   }
 
   public abstract void setViewModel(@Nullable AgendaViewModel viewModel);

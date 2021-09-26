@@ -49,5 +49,9 @@
     <fragment
         android:id="@+id/collectedItemsFragment"
         android:name="com.example.agendabelupet.ui.collected.CollectedItemsFragment"
-        android:label="CollectedItemsFragment" />
+        android:label="CollectedItemsFragment" >
+        <action
+            android:id="@+id/action_collectedItemsFragment_to_dogListFragment"
+            app:destination="@id/dogListFragment" />
+    </fragment>
 </navigation>

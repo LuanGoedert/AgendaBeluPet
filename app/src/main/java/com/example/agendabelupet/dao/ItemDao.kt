@@ -26,6 +26,12 @@ interface ItemDao {
     @Query("SELECT * FROM ItemEntity WHERE weekDay = :weekDay AND collected = 0")
     suspend fun getItemsNotCollectedByWeekDay(weekDay:String): List<ItemEntity>
 
+    @Query("SELECT * FROM ItemEntity")
+    suspend fun getAllItems(): List<ItemEntity>
+
+    @Query("SELECT * FROM ItemEntity WHERE  collected = 0")
+    suspend fun getItemsNotCollected(): List<ItemEntity>
+
     @Query("SELECT * FROM ItemEntity WHERE  collected = 1")
     suspend fun getItemsCollected(): List<ItemEntity>
 

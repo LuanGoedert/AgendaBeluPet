@@ -8,7 +8,8 @@ interface ItemRepository {
     suspend fun delete(item: ItemEntity)
     suspend fun updateToCollected(id: Int)
     suspend fun updateToNotCollected(id: Int)
-
     suspend fun getItemsNotCollectedByweekDay(itemDay: String): List<ItemEntity>
     suspend fun getItemsCollected(): List<ItemEntity>
+    suspend fun getAllItems(): List<ItemEntity>
+    suspend fun getItemsNotCollected(): List<ItemEntity>
 }

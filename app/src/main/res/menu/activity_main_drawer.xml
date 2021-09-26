@@ -8,13 +8,13 @@
             android:id="@+id/fragment_agenda"
             android:title="@string/text_agenda"
             android:icon="@drawable/ic_agenda"
+            android:iconTint="@color/light_blue"
             />
         <item
-            android:id="@+id/profit_fragment"
-            android:title="asdsa" />
-        <item
             android:id="@+id/collectedItemsFragment"
-            android:title="@string/text_itens_coletados"
+            android:title="@string/texttodos_os_itens"
+            android:icon="@drawable/ic_pet"
+            android:iconTint="@color/light_blue"
             />
     </group>
 </menu>

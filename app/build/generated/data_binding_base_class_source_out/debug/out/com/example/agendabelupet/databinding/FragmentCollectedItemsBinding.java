@@ -9,18 +9,28 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.example.agendabelupet.R;
 import com.example.agendabelupet.ui.collected.CollectedItemsViewModel;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentCollectedItemsBinding extends ViewDataBinding {
+  @NonNull
+  public final RecyclerView recyclerCollected;
+
+  @NonNull
+  public final TextInputLayout selectCollected;
+
   @Bindable
   protected CollectedItemsViewModel mViewModel;
 
   protected FragmentCollectedItemsBinding(Object _bindingComponent, View _root,
-      int _localFieldCount) {
+      int _localFieldCount, RecyclerView recyclerCollected, TextInputLayout selectCollected) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.recyclerCollected = recyclerCollected;
+    this.selectCollected = selectCollected;
   }
 
   public abstract void setViewModel(@Nullable CollectedItemsViewModel viewModel);

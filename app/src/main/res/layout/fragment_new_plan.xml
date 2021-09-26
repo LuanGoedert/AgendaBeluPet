@@ -266,6 +266,7 @@
                     android:paddingEnd="20dp"
                     android:textColorHint="@color/light_blue"
                     app:boxStrokeColor="@color/light_blue"
+                    app:hintTextColor="@color/light_blue"
 
 
                     app:layout_constraintEnd_toEndOf="parent"
@@ -331,8 +332,23 @@
                         android:textColor="@color/grey" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+<!--                <CalendarView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:clickable="false"-->
+<!--                    android:elevation="50dp"-->
+<!--                    android:backgroundTint="@color/light_blue"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
         </ScrollView>
 
         <Button

@@ -8,11 +8,18 @@ import androidx.lifecycle.viewModelScope
 import com.example.agendabelupet.models.entities.ItemEntity
 import com.example.agendabelupet.repository.ItemRepositoryImpl
 import kotlinx.coroutines.launch
+import java.util.*
 
 class AgendaViewModel(
     application: Application,
     private val itemRepositoryImpl: ItemRepositoryImpl
 ) : AndroidViewModel(application) {
+
+    val mWeekDay = MutableLiveData<String>("")
+    val weekDay: LiveData<String>
+        get() {
+            return mWeekDay
+        }
 
     private var _itensFromDb = MutableLiveData<List<ItemEntity>>()
     var itensFromDb: LiveData<List<ItemEntity>> = _itensFromDb

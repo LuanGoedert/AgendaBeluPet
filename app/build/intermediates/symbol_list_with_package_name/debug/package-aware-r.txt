@@ -1903,6 +1903,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable ic_pet
 drawable icone_erro
 drawable icone_sucesso
 drawable material_cursor_drawable
@@ -2001,6 +2002,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_collectedItemsFragment_to_dogListFragment
 id action_container
 id action_context_bar
 id action_divider
@@ -2068,6 +2070,7 @@ id cancel_button
 id cardView
 id card_itemInformation
 id card_pet_name
+id card_pet_name_collected
 id card_raca
 id card_week_day
 id carryVelocity
@@ -2330,6 +2333,7 @@ id raca
 id radio
 id ratio
 id rectangles
+id recycler_collected
 id recycler_week
 id reverseSawtooth
 id right
@@ -2359,6 +2363,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id select_collected
 id select_dialog_listview
 id select_week_day
 id selected
@@ -2420,6 +2425,7 @@ id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
+id teste
 id text
 id text2
 id textEnd
@@ -2428,6 +2434,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textWatcher
+id text_collected
 id text_district
 id text_endereco
 id text_house_number
@@ -2452,6 +2459,7 @@ id text_toolbar_main
 id text_value
 id text_warning
 id text_week_day
+id text_weekday_collected
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2575,6 +2583,7 @@ layout agenda_item
 layout app_bar_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout collected_items
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2723,6 +2732,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string collected
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -2874,8 +2884,10 @@ string text_telephone
 string text_ter_a
 string text_tipo_de_plano
 string text_tirar_foto_opcional
+string text_todos
 string text_value
 string text_wait
+string texttodos_os_itens
 string title_activity_navigation_drawer_activity
 string title_dashboard
 string title_home

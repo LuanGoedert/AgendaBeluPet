@@ -13,7 +13,9 @@ public class FragmentCollectedItemsBindingImpl extends FragmentCollectedItemsBin
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.select_collected, 1);
+        sViewsWithIds.put(R.id.recycler_collected, 2);
     }
     // views
     @NonNull
@@ -24,10 +26,12 @@ public class FragmentCollectedItemsBindingImpl extends FragmentCollectedItemsBin
     // Inverse Binding Event Handlers
 
     public FragmentCollectedItemsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 1, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private FragmentCollectedItemsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (androidx.recyclerview.widget.RecyclerView) bindings[2]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

@@ -423,6 +423,204 @@ public final class ItemDao_Impl implements ItemDao {
   }
 
   @Override
+  public Object getAllItems(final Continuation<? super List<ItemEntity>> p0) {
+    final String _sql = "SELECT * FROM ItemEntity";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<ItemEntity>>() {
+      @Override
+      public List<ItemEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfOwnerName = CursorUtil.getColumnIndexOrThrow(_cursor, "ownerName");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfRace = CursorUtil.getColumnIndexOrThrow(_cursor, "race");
+          final int _cursorIndexOfWeekDay = CursorUtil.getColumnIndexOrThrow(_cursor, "weekDay");
+          final int _cursorIndexOfPlan = CursorUtil.getColumnIndexOrThrow(_cursor, "plan");
+          final int _cursorIndexOfValue = CursorUtil.getColumnIndexOrThrow(_cursor, "value");
+          final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+          final int _cursorIndexOfDistrict = CursorUtil.getColumnIndexOrThrow(_cursor, "district");
+          final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
+          final int _cursorIndexOfHouseNumer = CursorUtil.getColumnIndexOrThrow(_cursor, "houseNumer");
+          final int _cursorIndexOfCollected = CursorUtil.getColumnIndexOrThrow(_cursor, "collected");
+          final List<ItemEntity> _result = new ArrayList<ItemEntity>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final ItemEntity _item;
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpOwnerName;
+            if (_cursor.isNull(_cursorIndexOfOwnerName)) {
+              _tmpOwnerName = null;
+            } else {
+              _tmpOwnerName = _cursor.getString(_cursorIndexOfOwnerName);
+            }
+            final String _tmpName;
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
+            final String _tmpRace;
+            if (_cursor.isNull(_cursorIndexOfRace)) {
+              _tmpRace = null;
+            } else {
+              _tmpRace = _cursor.getString(_cursorIndexOfRace);
+            }
+            final String _tmpWeekDay;
+            if (_cursor.isNull(_cursorIndexOfWeekDay)) {
+              _tmpWeekDay = null;
+            } else {
+              _tmpWeekDay = _cursor.getString(_cursorIndexOfWeekDay);
+            }
+            final String _tmpPlan;
+            if (_cursor.isNull(_cursorIndexOfPlan)) {
+              _tmpPlan = null;
+            } else {
+              _tmpPlan = _cursor.getString(_cursorIndexOfPlan);
+            }
+            final int _tmpValue;
+            _tmpValue = _cursor.getInt(_cursorIndexOfValue);
+            final String _tmpPhone;
+            if (_cursor.isNull(_cursorIndexOfPhone)) {
+              _tmpPhone = null;
+            } else {
+              _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            }
+            final String _tmpDistrict;
+            if (_cursor.isNull(_cursorIndexOfDistrict)) {
+              _tmpDistrict = null;
+            } else {
+              _tmpDistrict = _cursor.getString(_cursorIndexOfDistrict);
+            }
+            final String _tmpStreet;
+            if (_cursor.isNull(_cursorIndexOfStreet)) {
+              _tmpStreet = null;
+            } else {
+              _tmpStreet = _cursor.getString(_cursorIndexOfStreet);
+            }
+            final String _tmpHouseNumer;
+            if (_cursor.isNull(_cursorIndexOfHouseNumer)) {
+              _tmpHouseNumer = null;
+            } else {
+              _tmpHouseNumer = _cursor.getString(_cursorIndexOfHouseNumer);
+            }
+            final boolean _tmpCollected;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfCollected);
+            _tmpCollected = _tmp != 0;
+            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, p0);
+  }
+
+  @Override
+  public Object getItemsNotCollected(final Continuation<? super List<ItemEntity>> p0) {
+    final String _sql = "SELECT * FROM ItemEntity WHERE  collected = 0";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<ItemEntity>>() {
+      @Override
+      public List<ItemEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfOwnerName = CursorUtil.getColumnIndexOrThrow(_cursor, "ownerName");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfRace = CursorUtil.getColumnIndexOrThrow(_cursor, "race");
+          final int _cursorIndexOfWeekDay = CursorUtil.getColumnIndexOrThrow(_cursor, "weekDay");
+          final int _cursorIndexOfPlan = CursorUtil.getColumnIndexOrThrow(_cursor, "plan");
+          final int _cursorIndexOfValue = CursorUtil.getColumnIndexOrThrow(_cursor, "value");
+          final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+          final int _cursorIndexOfDistrict = CursorUtil.getColumnIndexOrThrow(_cursor, "district");
+          final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
+          final int _cursorIndexOfHouseNumer = CursorUtil.getColumnIndexOrThrow(_cursor, "houseNumer");
+          final int _cursorIndexOfCollected = CursorUtil.getColumnIndexOrThrow(_cursor, "collected");
+          final List<ItemEntity> _result = new ArrayList<ItemEntity>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final ItemEntity _item;
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpOwnerName;
+            if (_cursor.isNull(_cursorIndexOfOwnerName)) {
+              _tmpOwnerName = null;
+            } else {
+              _tmpOwnerName = _cursor.getString(_cursorIndexOfOwnerName);
+            }
+            final String _tmpName;
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
+            final String _tmpRace;
+            if (_cursor.isNull(_cursorIndexOfRace)) {
+              _tmpRace = null;
+            } else {
+              _tmpRace = _cursor.getString(_cursorIndexOfRace);
+            }
+            final String _tmpWeekDay;
+            if (_cursor.isNull(_cursorIndexOfWeekDay)) {
+              _tmpWeekDay = null;
+            } else {
+              _tmpWeekDay = _cursor.getString(_cursorIndexOfWeekDay);
+            }
+            final String _tmpPlan;
+            if (_cursor.isNull(_cursorIndexOfPlan)) {
+              _tmpPlan = null;
+            } else {
+              _tmpPlan = _cursor.getString(_cursorIndexOfPlan);
+            }
+            final int _tmpValue;
+            _tmpValue = _cursor.getInt(_cursorIndexOfValue);
+            final String _tmpPhone;
+            if (_cursor.isNull(_cursorIndexOfPhone)) {
+              _tmpPhone = null;
+            } else {
+              _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            }
+            final String _tmpDistrict;
+            if (_cursor.isNull(_cursorIndexOfDistrict)) {
+              _tmpDistrict = null;
+            } else {
+              _tmpDistrict = _cursor.getString(_cursorIndexOfDistrict);
+            }
+            final String _tmpStreet;
+            if (_cursor.isNull(_cursorIndexOfStreet)) {
+              _tmpStreet = null;
+            } else {
+              _tmpStreet = _cursor.getString(_cursorIndexOfStreet);
+            }
+            final String _tmpHouseNumer;
+            if (_cursor.isNull(_cursorIndexOfHouseNumer)) {
+              _tmpHouseNumer = null;
+            } else {
+              _tmpHouseNumer = _cursor.getString(_cursorIndexOfHouseNumer);
+            }
+            final boolean _tmpCollected;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfCollected);
+            _tmpCollected = _tmp != 0;
+            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, p0);
+  }
+
+  @Override
   public Object getItemsCollected(final Continuation<? super List<ItemEntity>> p0) {
     final String _sql = "SELECT * FROM ItemEntity WHERE  collected = 1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);

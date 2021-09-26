@@ -34,4 +34,12 @@ class ItemRepositoryImpl (private val itemDao: ItemDao): ItemRepository {
     override suspend fun getItemsCollected(): List<ItemEntity> {
         return itemDao.getItemsCollected()
     }
+
+    override suspend fun getAllItems(): List<ItemEntity> {
+        return itemDao.getAllItems()
+    }
+
+    override suspend fun getItemsNotCollected(): List<ItemEntity> {
+        return itemDao.getItemsNotCollected()
+    }
 }
