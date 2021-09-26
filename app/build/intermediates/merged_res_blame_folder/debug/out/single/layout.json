@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agenda.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_agenda.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_collected_items.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_collected_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dog_list.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_dog_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profit.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_profit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_new_plan.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_new_plan.xml"
+    }
+]

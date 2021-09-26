@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/fragment_agenda">
+
+    <fragment
+        android:id="@+id/fragment_agenda"
+        android:name="com.example.agendabelupet.ui.agenda.AgendaFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_agenda" >
+        <action
+            android:id="@+id/action_fragment_agenda_to_dogListFragment"
+            app:destination="@id/dogListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/new_plan_fragment"
+        android:name="com.example.agendabelupet.ui.newPlan.NewPlanFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_new_plan" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_fragment_agenda"
+            app:destination="@id/fragment_agenda" />
+        <argument
+            android:name="newPlanArgument"
+            app:argType="com.example.agendabelupet.models.entities.ItemEntity"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profit_fragment"
+        android:name="com.example.agendabelupet.ui.profit.ProfitFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_profit" />
+    <fragment
+        android:id="@+id/dogListFragment"
+        android:name="com.example.agendabelupet.ui.dogList.DogListFragment"
+        android:label="DogListFragment" >
+        <argument
+            android:name="ItemEntity"
+            app:argType="com.example.agendabelupet.models.entities.ItemEntity" />
+        <action
+            android:id="@+id/action_dogListFragment_to_new_plan_fragment"
+            app:destination="@id/new_plan_fragment" />
+    </fragment>
+    <action android:id="@+id/action_global_new_plan_fragment" app:destination="@id/new_plan_fragment" /><action android:id="@+id/action_global_fragment_agenda" app:destination="@id/fragment_agenda"/>
+    <fragment
+        android:id="@+id/collectedItemsFragment"
+        android:name="com.example.agendabelupet.ui.collected.CollectedItemsFragment"
+        android:label="CollectedItemsFragment" />
+</navigation>

@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">AgendaBeluPet</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="text_rendimentos">Rendimentos</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="text_agenda">Agenda</string>
+    <string name="text_segunda">Segunda</string>
+    <string name="text_ter_a">Terça</string>
+    <string name="text_quarta">Quarta</string>
+    <string name="text_quinta">Quinta</string>
+    <string name="text_sexta">Sexta</string>
+    <string name="text_s_bado">Sábado</string>
+    <string name="text_avulso">Avulso</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_nome">Nome</string>
+    <string name="text_tipo_de_plano">Tipo de Plano</string>
+    <string name="text_ra_a">Raça</string>
+    <string name="text_dia_da_semana">Dia da semana</string>
+    <string name="text_save">salvar</string>
+    <string name="text_endere_o">Endereço</string>
+    <string name="text_day">Dia: %s</string>
+    <string name="text_plan">Plano: %s</string>
+    <string name="text_photo">Foto</string>
+    <string name="text_tirar_foto_opcional">tirar foto(opcional)</string>
+    <string name="text_value">Valor(R$)</string>
+    <string name="text_aloha">\"aloha \"</string>
+    <string name="text_saved">Plano salvo com sucesso!!</string>
+    <string name="text_ok">ok</string>
+    <string name="text_search">Buscar</string>
+    <string name="text_price">Preço</string>
+    <string name="text_telephone">Telefone</string>
+    <string name="text_owner">Dono(a): %s</string>
+    <string name="text_owner_no_conc">Dono(a)</string>
+    <string name="text_pet">Pet</string>
+    <string name="text_districty">Bairro</string>
+    <string name="text_n">N°: %s</string>
+    <string name="text_street">Rua</string>
+    <string name="text_district">Bairro: %s</string>
+    <string name="text_house_number">house_number</string>
+    <string name="text_edit_plan">Editar Plano</string>
+    <string name="text_pet_name">Nome: %s</string>
+    <string name="text_race">Raça: %s</string>
+    <string name="text_phone_number">\Telefone: \ %s</string>
+    <string name="text_sreet">Rua: %s</string>
+    <string name="text_plan_value">\Valor: \ %s \R$</string>
+    <string name="text_day_no_concat">Dia</string>
+    <string name="text_add">Adicionar Plano</string>
+    <string name="text_number_no_concat">N°</string>
+    <string name="text_wait">Aguarde...</string>
+    <string name="text_mark_as_collected">Marcar como coletado</string>
+    <string name="text_item_collected">O item foi marcado com coletado</string>
+
+
+    <string-array name="dias_da_semana">
+        <item name="segunda">Segunda</item>
+        <item name="ter_a">Terça</item>
+        <item name="quarta">Quarta</item>
+        <item name="quinta">Quinta</item>
+        <item name="sexta">Sexta</item>
+        <item name="s_bado">Sábado</item>
+    </string-array>
+
+    <string-array name="tipos_planos">
+        <item name="mensal">Mensal</item>
+        <item name="semanal">Semanal</item>
+    </string-array>
+    <string name="title_activity_navigation_drawer_activity">NavigationDrawerActivityActivity
+    </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="text_not_collected">Não coletados</string>
+    <string name="text_itens_coletados">Itens coletados</string>
+
+</resources>

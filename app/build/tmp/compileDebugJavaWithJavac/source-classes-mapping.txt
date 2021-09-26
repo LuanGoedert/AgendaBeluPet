@@ -1,0 +1,81 @@
+com/example/agendabelupet/ui/newPlan/NewPlanFragmentDirections.java
+ com.example.agendabelupet.ui.newPlan.NewPlanFragmentDirections
+com/example/agendabelupet/BR.java
+ com.example.agendabelupet.BR
+com/example/agendabelupet/ui/dogList/DogListFragmentDirections.java
+ com.example.agendabelupet.ui.dogList.DogListFragmentDirections
+ com.example.agendabelupet.ui.dogList.DogListFragmentDirections$1
+ com.example.agendabelupet.ui.dogList.DogListFragmentDirections$ActionDogListFragmentToNewPlanFragment
+com/example/agendabelupet/ui/newPlan/NewPlanFragmentArgs.java
+ com.example.agendabelupet.ui.newPlan.NewPlanFragmentArgs
+ com.example.agendabelupet.ui.newPlan.NewPlanFragmentArgs$1
+ com.example.agendabelupet.ui.newPlan.NewPlanFragmentArgs$Builder
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+com/example/agendabelupet/ui/dogList/DogListFragmentArgs.java
+ com.example.agendabelupet.ui.dogList.DogListFragmentArgs
+ com.example.agendabelupet.ui.dogList.DogListFragmentArgs$1
+ com.example.agendabelupet.ui.dogList.DogListFragmentArgs$Builder
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/example/agendabelupet/ui/agenda/AgendaFragmentDirections.java
+ com.example.agendabelupet.ui.agenda.AgendaFragmentDirections
+ com.example.agendabelupet.ui.agenda.AgendaFragmentDirections$1
+ com.example.agendabelupet.ui.agenda.AgendaFragmentDirections$ActionFragmentAgendaToDogListFragment
+com/example/agendabelupet/databinding/FragmentProfitBindingImpl.java
+ com.example.agendabelupet.databinding.FragmentProfitBindingImpl
+com/example/agendabelupet/MobileNavigationDirections.java
+ com.example.agendabelupet.MobileNavigationDirections
+ com.example.agendabelupet.MobileNavigationDirections$1
+ com.example.agendabelupet.MobileNavigationDirections$ActionGlobalNewPlanFragment
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/agendabelupet/ui/collected/CollectedItemsFragmentDirections.java
+ com.example.agendabelupet.ui.collected.CollectedItemsFragmentDirections
+com/example/agendabelupet/ui/profit/ProfitFragmentDirections.java
+ com.example.agendabelupet.ui.profit.ProfitFragmentDirections
+com/example/agendabelupet/BuildConfig.java
+ com.example.agendabelupet.BuildConfig
+com/example/agendabelupet/databinding/FragmentProfitBinding.java
+ com.example.agendabelupet.databinding.FragmentProfitBinding
+com/example/agendabelupet/DataBindingTriggerClass.java
+ com.example.agendabelupet.DataBindingTriggerClass
+com/example/agendabelupet/dao/ItemDao_Impl.java
+ com.example.agendabelupet.dao.ItemDao_Impl
+ com.example.agendabelupet.dao.ItemDao_Impl$1
+ com.example.agendabelupet.dao.ItemDao_Impl$10
+ com.example.agendabelupet.dao.ItemDao_Impl$11
+ com.example.agendabelupet.dao.ItemDao_Impl$12
+ com.example.agendabelupet.dao.ItemDao_Impl$13
+ com.example.agendabelupet.dao.ItemDao_Impl$14
+ com.example.agendabelupet.dao.ItemDao_Impl$2
+ com.example.agendabelupet.dao.ItemDao_Impl$3
+ com.example.agendabelupet.dao.ItemDao_Impl$4
+ com.example.agendabelupet.dao.ItemDao_Impl$5
+ com.example.agendabelupet.dao.ItemDao_Impl$6
+ com.example.agendabelupet.dao.ItemDao_Impl$7
+ com.example.agendabelupet.dao.ItemDao_Impl$8
+ com.example.agendabelupet.dao.ItemDao_Impl$9
+com/example/agendabelupet/DataBinderMapperImpl.java
+ com.example.agendabelupet.DataBinderMapperImpl
+ com.example.agendabelupet.DataBinderMapperImpl$InnerBrLookup
+ com.example.agendabelupet.DataBinderMapperImpl$InnerLayoutIdLookup
+com/example/agendabelupet/databinding/FragmentDogListBindingImpl.java
+ com.example.agendabelupet.databinding.FragmentDogListBindingImpl
+com/example/agendabelupet/databinding/FragmentDogListBinding.java
+ com.example.agendabelupet.databinding.FragmentDogListBinding
+com/example/agendabelupet/databinding/FragmentNewPlanBinding.java
+ com.example.agendabelupet.databinding.FragmentNewPlanBinding
+com/example/agendabelupet/databinding/FragmentNewPlanBindingImpl.java
+ com.example.agendabelupet.databinding.FragmentNewPlanBindingImpl
+com/example/agendabelupet/databinding/FragmentAgendaBinding.java
+ com.example.agendabelupet.databinding.FragmentAgendaBinding
+com/example/agendabelupet/databinding/FragmentCollectedItemsBinding.java
+ com.example.agendabelupet.databinding.FragmentCollectedItemsBinding
+com/example/agendabelupet/database/AppDataBase_Impl.java
+ com.example.agendabelupet.database.AppDataBase_Impl
+ com.example.agendabelupet.database.AppDataBase_Impl$1
+com/example/agendabelupet/databinding/FragmentAgendaBindingImpl.java
+ com.example.agendabelupet.databinding.FragmentAgendaBindingImpl
+com/example/agendabelupet/databinding/FragmentCollectedItemsBindingImpl.java
+ com.example.agendabelupet.databinding.FragmentCollectedItemsBindingImpl

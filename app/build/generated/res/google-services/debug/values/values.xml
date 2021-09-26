@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">548494174-u9mp3oes31v2ou7s1o75gpd16v1qdooo.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">548494174</string>
+    <string name="google_api_key" translatable="false">AIzaSyDm86h1dSDVmRZc5Fgdu14JNlU1mqvIHS4</string>
+    <string name="google_app_id" translatable="false">1:548494174:android:2e591070522187ec3a4dcf</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDm86h1dSDVmRZc5Fgdu14JNlU1mqvIHS4</string>
+    <string name="google_storage_bucket" translatable="false">belupetagenda.appspot.com</string>
+    <string name="project_id" translatable="false">belupetagenda</string>
+</resources>
