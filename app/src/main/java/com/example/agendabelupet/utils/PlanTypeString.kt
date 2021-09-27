@@ -4,7 +4,8 @@ class PlanTypeString {
     fun loadPlanTypes(): List<String> {
         return mutableListOf(
             "Mensal",
-            "Quinzenal"
+            "Quinzenal",
+            "Avulso"
         )
     }
 }

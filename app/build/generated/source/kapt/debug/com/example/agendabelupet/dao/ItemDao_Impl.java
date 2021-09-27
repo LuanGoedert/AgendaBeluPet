@@ -46,7 +46,7 @@ public final class ItemDao_Impl implements ItemDao {
     this.__insertionAdapterOfItemEntity = new EntityInsertionAdapter<ItemEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `ItemEntity` (`id`,`ownerName`,`name`,`race`,`weekDay`,`plan`,`value`,`phone`,`district`,`street`,`houseNumer`,`collected`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `ItemEntity` (`id`,`ownerName`,`name`,`race`,`weekDay`,`plan`,`value`,`phone`,`district`,`street`,`houseNumer`,`collected`,`biweekly`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -101,6 +101,11 @@ public final class ItemDao_Impl implements ItemDao {
         final int _tmp;
         _tmp = value.getCollected() ? 1 : 0;
         stmt.bindLong(12, _tmp);
+        if (value.getBiweekly() == null) {
+          stmt.bindNull(13);
+        } else {
+          stmt.bindString(13, value.getBiweekly());
+        }
       }
     };
     this.__deletionAdapterOfItemEntity = new EntityDeletionOrUpdateAdapter<ItemEntity>(__db) {
@@ -117,7 +122,7 @@ public final class ItemDao_Impl implements ItemDao {
     this.__updateAdapterOfItemEntity = new EntityDeletionOrUpdateAdapter<ItemEntity>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `ItemEntity` SET `id` = ?,`ownerName` = ?,`name` = ?,`race` = ?,`weekDay` = ?,`plan` = ?,`value` = ?,`phone` = ?,`district` = ?,`street` = ?,`houseNumer` = ?,`collected` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `ItemEntity` SET `id` = ?,`ownerName` = ?,`name` = ?,`race` = ?,`weekDay` = ?,`plan` = ?,`value` = ?,`phone` = ?,`district` = ?,`street` = ?,`houseNumer` = ?,`collected` = ?,`biweekly` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -172,7 +177,12 @@ public final class ItemDao_Impl implements ItemDao {
         final int _tmp;
         _tmp = value.getCollected() ? 1 : 0;
         stmt.bindLong(12, _tmp);
-        stmt.bindLong(13, value.getId());
+        if (value.getBiweekly() == null) {
+          stmt.bindNull(13);
+        } else {
+          stmt.bindString(13, value.getBiweekly());
+        }
+        stmt.bindLong(14, value.getId());
       }
     };
     this.__preparedStmtOfUpdateToCollected = new SharedSQLiteStatement(__db) {
@@ -345,6 +355,7 @@ public final class ItemDao_Impl implements ItemDao {
           final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
           final int _cursorIndexOfHouseNumer = CursorUtil.getColumnIndexOrThrow(_cursor, "houseNumer");
           final int _cursorIndexOfCollected = CursorUtil.getColumnIndexOrThrow(_cursor, "collected");
+          final int _cursorIndexOfBiweekly = CursorUtil.getColumnIndexOrThrow(_cursor, "biweekly");
           final List<ItemEntity> _result = new ArrayList<ItemEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final ItemEntity _item;
@@ -410,7 +421,13 @@ public final class ItemDao_Impl implements ItemDao {
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfCollected);
             _tmpCollected = _tmp != 0;
-            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected);
+            final String _tmpBiweekly;
+            if (_cursor.isNull(_cursorIndexOfBiweekly)) {
+              _tmpBiweekly = null;
+            } else {
+              _tmpBiweekly = _cursor.getString(_cursorIndexOfBiweekly);
+            }
+            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected,_tmpBiweekly);
             _result.add(_item);
           }
           return _result;
@@ -444,6 +461,7 @@ public final class ItemDao_Impl implements ItemDao {
           final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
           final int _cursorIndexOfHouseNumer = CursorUtil.getColumnIndexOrThrow(_cursor, "houseNumer");
           final int _cursorIndexOfCollected = CursorUtil.getColumnIndexOrThrow(_cursor, "collected");
+          final int _cursorIndexOfBiweekly = CursorUtil.getColumnIndexOrThrow(_cursor, "biweekly");
           final List<ItemEntity> _result = new ArrayList<ItemEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final ItemEntity _item;
@@ -509,7 +527,13 @@ public final class ItemDao_Impl implements ItemDao {
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfCollected);
             _tmpCollected = _tmp != 0;
-            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected);
+            final String _tmpBiweekly;
+            if (_cursor.isNull(_cursorIndexOfBiweekly)) {
+              _tmpBiweekly = null;
+            } else {
+              _tmpBiweekly = _cursor.getString(_cursorIndexOfBiweekly);
+            }
+            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected,_tmpBiweekly);
             _result.add(_item);
           }
           return _result;
@@ -543,6 +567,7 @@ public final class ItemDao_Impl implements ItemDao {
           final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
           final int _cursorIndexOfHouseNumer = CursorUtil.getColumnIndexOrThrow(_cursor, "houseNumer");
           final int _cursorIndexOfCollected = CursorUtil.getColumnIndexOrThrow(_cursor, "collected");
+          final int _cursorIndexOfBiweekly = CursorUtil.getColumnIndexOrThrow(_cursor, "biweekly");
           final List<ItemEntity> _result = new ArrayList<ItemEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final ItemEntity _item;
@@ -608,7 +633,13 @@ public final class ItemDao_Impl implements ItemDao {
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfCollected);
             _tmpCollected = _tmp != 0;
-            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected);
+            final String _tmpBiweekly;
+            if (_cursor.isNull(_cursorIndexOfBiweekly)) {
+              _tmpBiweekly = null;
+            } else {
+              _tmpBiweekly = _cursor.getString(_cursorIndexOfBiweekly);
+            }
+            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected,_tmpBiweekly);
             _result.add(_item);
           }
           return _result;
@@ -642,6 +673,7 @@ public final class ItemDao_Impl implements ItemDao {
           final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
           final int _cursorIndexOfHouseNumer = CursorUtil.getColumnIndexOrThrow(_cursor, "houseNumer");
           final int _cursorIndexOfCollected = CursorUtil.getColumnIndexOrThrow(_cursor, "collected");
+          final int _cursorIndexOfBiweekly = CursorUtil.getColumnIndexOrThrow(_cursor, "biweekly");
           final List<ItemEntity> _result = new ArrayList<ItemEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final ItemEntity _item;
@@ -707,7 +739,13 @@ public final class ItemDao_Impl implements ItemDao {
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfCollected);
             _tmpCollected = _tmp != 0;
-            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected);
+            final String _tmpBiweekly;
+            if (_cursor.isNull(_cursorIndexOfBiweekly)) {
+              _tmpBiweekly = null;
+            } else {
+              _tmpBiweekly = _cursor.getString(_cursorIndexOfBiweekly);
+            }
+            _item = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlan,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumer,_tmpCollected,_tmpBiweekly);
             _result.add(_item);
           }
           return _result;

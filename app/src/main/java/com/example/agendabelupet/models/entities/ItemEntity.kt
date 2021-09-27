@@ -19,5 +19,6 @@ data class ItemEntity (
     var district: String  = "",
     var street : String = "",
     var houseNumer : String = "",
-    var collected: Boolean = false
+    var collected: Boolean = false,
+    var dataQuinzenal : String = ""
     ): Serializable

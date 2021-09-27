@@ -19,8 +19,8 @@ androidx/databinding/library/baseAdapters/BR.java
 com/example/agendabelupet/database/AppDataBase_Impl.java
  com.example.agendabelupet.database.AppDataBase_Impl
  com.example.agendabelupet.database.AppDataBase_Impl$1
-com/example/agendabelupet/DataBindingTriggerClass.java
- com.example.agendabelupet.DataBindingTriggerClass
+com/example/agendabelupet/databinding/FragmentAgendaBindingImpl.java
+ com.example.agendabelupet.databinding.FragmentAgendaBindingImpl
 com/example/agendabelupet/MobileNavigationDirections.java
  com.example.agendabelupet.MobileNavigationDirections
  com.example.agendabelupet.MobileNavigationDirections$1
@@ -73,13 +73,13 @@ com/example/agendabelupet/ui/newPlan/NewPlanFragmentArgs.java
  com.example.agendabelupet.ui.newPlan.NewPlanFragmentArgs
  com.example.agendabelupet.ui.newPlan.NewPlanFragmentArgs$1
  com.example.agendabelupet.ui.newPlan.NewPlanFragmentArgs$Builder
-com/example/agendabelupet/databinding/FragmentCollectedItemsBinding.java
- com.example.agendabelupet.databinding.FragmentCollectedItemsBinding
+com/example/agendabelupet/databinding/FragmentAgendaBinding.java
+ com.example.agendabelupet.databinding.FragmentAgendaBinding
 com/example/agendabelupet/databinding/FragmentProfitBindingImpl.java
  com.example.agendabelupet.databinding.FragmentProfitBindingImpl
 androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
-com/example/agendabelupet/databinding/FragmentAgendaBinding.java
- com.example.agendabelupet.databinding.FragmentAgendaBinding
-com/example/agendabelupet/databinding/FragmentAgendaBindingImpl.java
- com.example.agendabelupet.databinding.FragmentAgendaBindingImpl
+com/example/agendabelupet/DataBindingTriggerClass.java
+ com.example.agendabelupet.DataBindingTriggerClass
+com/example/agendabelupet/databinding/FragmentCollectedItemsBinding.java
+ com.example.agendabelupet.databinding.FragmentCollectedItemsBinding

@@ -1,7 +1,10 @@
 package com.example.agendabelupet.ui.newPlan
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.telephony.PhoneNumberFormattingTextWatcher
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,13 +20,17 @@ import com.example.agendabelupet.models.entities.ItemEntity
 import com.example.agendabelupet.utils.CustomDialogsExt
 import com.example.agendabelupet.utils.PlanTypeString
 import com.example.agendabelupet.utils.WeekDaysString
+import com.google.android.material.datepicker.MaterialDatePicker
+import kotlinx.android.synthetic.main.fragment_new_plan.*
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class NewPlanFragment : Fragment() {
     private lateinit var binding: FragmentNewPlanBinding
-    private lateinit var customDialog : CustomDialogsExt
+    private lateinit var customDialog: CustomDialogsExt
     private val viewModel: NewPlanViewModel by viewModel()
     private val itemByArgs: NewPlanFragmentArgs? by navArgs()
 
@@ -44,21 +51,41 @@ class NewPlanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         customDialog = CustomDialogsExt(requireActivity())
-
-        setItemOnScreen()
-
         val items = WeekDaysString()
         val plans = PlanTypeString()
 
+
         val planAdapter = ArrayAdapter(requireContext(), R.layout.list_item, plans.loadPlanTypes())
         val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items.loadWeekDays())
+
+        val myCalendar = Calendar.getInstance()
+
+        val datePickerDialog = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+            myCalendar.set(Calendar.YEAR, year)
+            myCalendar.set(Calendar.MONTH, month)
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            updatelable(myCalendar)
+        }
+
+        setItemOnScreen()
+
+        binding.valueDatePicker.setOnClickListener {
+            DatePickerDialog(
+                requireContext(),
+                datePickerDialog,
+                myCalendar.get(Calendar.YEAR),
+                myCalendar.get(Calendar.MONTH),
+                myCalendar.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
+
 
         binding.phoneText.editText?.addTextChangedListener(PhoneNumberFormattingTextWatcher("BR"))
         (binding.textWeekDay.editText as? AutoCompleteTextView)?.setAdapter(adapter)
         (binding.planText.editText as? AutoCompleteTextView)?.setAdapter(planAdapter)
 
-        viewModel.isItemSaved.observe(viewLifecycleOwner){
-            if(it){
+        viewModel.isItemSaved.observe(viewLifecycleOwner) {
+            if (it) {
                 customDialog.defaultDialog(
                     title = R.string.text_saved,
                     image = R.drawable.icone_sucesso,
@@ -70,12 +97,30 @@ class NewPlanFragment : Fragment() {
             }
         }
 
-        binding.buttonSaveImage.setOnClickListener {
+        binding.planText.editText?.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable) {
+              if(s.toString() == "Quinzenal") {
+                  viewModel.isbiweekly.postValue(true)
+              } else {
+                  viewModel.isbiweekly.postValue(false)
+                  binding.valueDatePicker.text = getString(R.string.text_dia_apenas_se_quinzenal)
+                }
+
+            }
+        })
+
+        binding.buttonSaveItem.setOnClickListener {
             viewModel.viewModelScope.launch {
                 if (binding.editTextName.text?.isNotEmpty() == true &&
                     binding.textRaca.text?.isNotEmpty() == true &&
                     binding.textEndereco.text?.isNotEmpty() == true
                 ) {
+                    var biWeekly = ""
+                    if(binding.planText.editText?.text.toString() == "Quinzenal"){
+                      biWeekly = binding.valueDatePicker.text.split("/")[0]
+                    }
                     viewModel.saveDog(
                         ItemEntity(
                             ownerName = binding.editTextNameOwner.text.toString(),
@@ -86,11 +131,12 @@ class NewPlanFragment : Fragment() {
                             weekDay = binding.textWeekDay.editText!!.text.toString(),
                             plan = binding.planText.editText!!.text.toString(),
                             value = binding.valueText.editText!!.text.toString().toInt(),
-                            district = binding.districtText.editText!!.text.toString() ,
-                            houseNumer = binding.houseNumberText.editText!!.text.toString()
+                            district = binding.districtText.editText!!.text.toString(),
+                            houseNumer = binding.houseNumberText.editText!!.text.toString(),
+                            biweekly = biWeekly
                         )
                     )
-                }else{
+                } else {
                     customDialog.defaultDialog(
                         title = R.string.text_aloha,
                         image = R.drawable.icone_erro,
@@ -104,13 +150,18 @@ class NewPlanFragment : Fragment() {
 
     }
 
-    private fun goToDogListFragment(){
+    private fun updatelable(myCalendar: Calendar) {
+        val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        binding.valueDatePicker.text = sdf.format(myCalendar.time)
+    }
+
+    private fun goToDogListFragment() {
         val action = NewPlanFragmentDirections.actionNavigationDashboardToFragmentAgenda()
         findNavController().navigate(action)
     }
 
-    private fun setItemOnScreen(){
-        if(itemByArgs?.newPlanArgument != null){
+    private fun setItemOnScreen() {
+        if (itemByArgs?.newPlanArgument != null) {
             binding.inputOwnerName.editText?.setText(itemByArgs!!.newPlanArgument!!.ownerName)
             binding.inputName.editText?.setText(itemByArgs!!.newPlanArgument!!.name)
             binding.raca.editText?.setText(itemByArgs!!.newPlanArgument!!.race)
@@ -120,9 +171,9 @@ class NewPlanFragment : Fragment() {
             binding.phoneText.editText?.setText(itemByArgs!!.newPlanArgument!!.phone)
             binding.textWeekDay.editText?.setText(itemByArgs!!.newPlanArgument!!.weekDay)
             binding.planText.editText?.setText(itemByArgs!!.newPlanArgument!!.plan)
-            if(itemByArgs!!.newPlanArgument!!.value == 0){
+            if (itemByArgs!!.newPlanArgument!!.value == 0) {
                 binding.valueText.editText?.setText("")
-            }else {
+            } else {
                 binding.valueText.editText?.setText(itemByArgs!!.newPlanArgument!!.value.toString())
             }
         }

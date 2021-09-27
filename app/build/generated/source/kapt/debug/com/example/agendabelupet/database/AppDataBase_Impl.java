@@ -35,9 +35,9 @@ public final class AppDataBase_Impl extends AppDataBase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `ItemEntity` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ownerName` TEXT NOT NULL, `name` TEXT NOT NULL, `race` TEXT NOT NULL, `weekDay` TEXT NOT NULL, `plan` TEXT NOT NULL, `value` INTEGER NOT NULL, `phone` TEXT NOT NULL, `district` TEXT NOT NULL, `street` TEXT NOT NULL, `houseNumer` TEXT NOT NULL, `collected` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ItemEntity` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ownerName` TEXT NOT NULL, `name` TEXT NOT NULL, `race` TEXT NOT NULL, `weekDay` TEXT NOT NULL, `plan` TEXT NOT NULL, `value` INTEGER NOT NULL, `phone` TEXT NOT NULL, `district` TEXT NOT NULL, `street` TEXT NOT NULL, `houseNumer` TEXT NOT NULL, `collected` INTEGER NOT NULL, `biweekly` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1a0a45fe22dd25f5e548d752ad77e258')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0d8fe92a3cbe1a6bd09881e5d89f8d97')");
       }
 
       @Override
@@ -81,7 +81,7 @@ public final class AppDataBase_Impl extends AppDataBase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsItemEntity = new HashMap<String, TableInfo.Column>(12);
+        final HashMap<String, TableInfo.Column> _columnsItemEntity = new HashMap<String, TableInfo.Column>(13);
         _columnsItemEntity.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("ownerName", new TableInfo.Column("ownerName", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -94,6 +94,7 @@ public final class AppDataBase_Impl extends AppDataBase {
         _columnsItemEntity.put("street", new TableInfo.Column("street", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("houseNumer", new TableInfo.Column("houseNumer", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("collected", new TableInfo.Column("collected", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsItemEntity.put("biweekly", new TableInfo.Column("biweekly", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysItemEntity = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesItemEntity = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoItemEntity = new TableInfo("ItemEntity", _columnsItemEntity, _foreignKeysItemEntity, _indicesItemEntity);
@@ -105,7 +106,7 @@ public final class AppDataBase_Impl extends AppDataBase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "1a0a45fe22dd25f5e548d752ad77e258", "d81369243bcf37cd69a0d6e31b13e986");
+    }, "0d8fe92a3cbe1a6bd09881e5d89f8d97", "fb96e351d5ca4683a95117c147647bd9");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

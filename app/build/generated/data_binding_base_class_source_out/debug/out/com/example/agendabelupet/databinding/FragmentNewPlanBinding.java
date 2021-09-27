@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.agendabelupet.R;
 import com.example.agendabelupet.ui.newPlan.NewPlanViewModel;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
@@ -23,7 +24,7 @@ public abstract class FragmentNewPlanBinding extends ViewDataBinding {
   public final TextInputLayout addressText;
 
   @NonNull
-  public final Button buttonSaveImage;
+  public final Button buttonSaveItem;
 
   @NonNull
   public final TextInputLayout districtText;
@@ -77,23 +78,26 @@ public abstract class FragmentNewPlanBinding extends ViewDataBinding {
   public final TextInputLayout textWeekDay;
 
   @NonNull
+  public final MaterialButton valueDatePicker;
+
+  @NonNull
   public final TextInputLayout valueText;
 
   @Bindable
   protected NewPlanViewModel mViewModel;
 
   protected FragmentNewPlanBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputLayout addressText, Button buttonSaveImage, TextInputLayout districtText,
+      TextInputLayout addressText, Button buttonSaveItem, TextInputLayout districtText,
       TextInputEditText editTextName, TextInputEditText editTextNameOwner,
       TextInputLayout houseNumberText, TextInputLayout inputName, TextInputLayout inputOwnerName,
       TextInputLayout phoneText, TextInputLayout planText, TextInputLayout raca,
       ScrollView scrollView, TextInputEditText textDistrict, TextInputEditText textEndereco,
       TextInputEditText textHouseNumber, TextInputEditText textRaca,
       TextInputEditText textTelephone, TextInputEditText textValue, TextInputLayout textWeekDay,
-      TextInputLayout valueText) {
+      MaterialButton valueDatePicker, TextInputLayout valueText) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addressText = addressText;
-    this.buttonSaveImage = buttonSaveImage;
+    this.buttonSaveItem = buttonSaveItem;
     this.districtText = districtText;
     this.editTextName = editTextName;
     this.editTextNameOwner = editTextNameOwner;
@@ -111,6 +115,7 @@ public abstract class FragmentNewPlanBinding extends ViewDataBinding {
     this.textTelephone = textTelephone;
     this.textValue = textValue;
     this.textWeekDay = textWeekDay;
+    this.valueDatePicker = valueDatePicker;
     this.valueText = valueText;
   }
 

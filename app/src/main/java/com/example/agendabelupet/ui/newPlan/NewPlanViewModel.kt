@@ -18,6 +18,8 @@ import java.io.OutputStream
 
 class NewPlanViewModel(application: Application, private val itemRepositoryImpl: ItemRepositoryImpl) : AndroidViewModel(application) {
 
+    val isbiweekly = MutableLiveData(false)
+
     val _isItemSaved = MutableLiveData<Boolean>()
     val isItemSaved : LiveData<Boolean>
     get() {

@@ -84,5 +84,7 @@
     <string name="collected">Coletado</string>
     <string name="text_todos">Todos</string>
     <string name="texttodos_os_itens">Todos os itens</string>
+    <string name="txt_dia_em_que_ir_come_ar_apenas_quinzenal">Dia em que irá começar(apenas quinzenal)</string>
+    <string name="text_dia_apenas_se_quinzenal">Início(Apenas se quinzenal)</string>
 
 </resources>
