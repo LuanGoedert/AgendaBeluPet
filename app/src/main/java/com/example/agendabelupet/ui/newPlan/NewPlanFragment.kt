@@ -133,7 +133,7 @@ class NewPlanFragment : Fragment() {
                             value = binding.valueText.editText!!.text.toString().toInt(),
                             district = binding.districtText.editText!!.text.toString(),
                             houseNumer = binding.houseNumberText.editText!!.text.toString(),
-                            biweekly = biWeekly
+
                         )
                     )
                 } else {

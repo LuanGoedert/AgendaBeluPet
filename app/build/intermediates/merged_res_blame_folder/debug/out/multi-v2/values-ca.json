@@ -23,23 +23,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Luan\\.gradle\\caches\\transforms-2\\files-2.1\\10f0a929d8b7bc0d0884da846b746bc8\\jetified-play-services-basement-17.1.0\\res\\values-ca\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "193",
-                        "endOffsets": "440"
-                    },
-                    "to": {
-                        "startLines": "45",
-                        "startColumns": "4",
-                        "startOffsets": "4564",
-                        "endColumns": "193",
-                        "endOffsets": "4753"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Luan\\.gradle\\caches\\transforms-2\\files-2.1\\e8072191b7b41e5e30b55b6258d9eddf\\core-1.6.0\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2",
@@ -57,7 +40,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Luan\\.gradle\\caches\\transforms-2\\files-2.1\\74b902de26e4eade5aa3b246a4ad544f\\jetified-play-services-base-17.1.0\\res\\values-ca\\values.xml",
+                    "source": "C:\\Users\\Luan\\.gradle\\caches\\transforms-2\\files-2.1\\e27c9097dfd266e47723953478fea443\\jetified-play-services-basement-17.5.0\\res\\values-ca\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "193",
+                        "endOffsets": "440"
+                    },
+                    "to": {
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "4564",
+                        "endColumns": "193",
+                        "endOffsets": "4753"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Luan\\.gradle\\caches\\transforms-2\\files-2.1\\7b5177dcd3e870ccda97bb18c6ea5d0e\\jetified-play-services-base-17.5.0\\res\\values-ca\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

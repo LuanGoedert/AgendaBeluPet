@@ -1481,6 +1481,8 @@ dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen fragment_horizontal_margin
+dimen fragment_vertical_margin
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -2725,6 +2727,8 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string action_sign_in
+string action_sign_in_short
 string adicionar
 string app_name
 string appbar_scrolling_view_behavior
@@ -2767,7 +2771,10 @@ string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string invalid_password
+string invalid_username
 string item_view_role_description
+string login_failed
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2839,6 +2846,8 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string prompt_email
+string prompt_password
 string search_menu_title
 string status_bar_notification_info_overflow
 string text_add
@@ -2897,6 +2906,7 @@ string title_dashboard
 string title_home
 string title_notifications
 string txt_dia_em_que_ir_come_ar_apenas_quinzenal
+string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

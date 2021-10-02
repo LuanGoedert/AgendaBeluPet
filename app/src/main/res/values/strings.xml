@@ -86,5 +86,14 @@
     <string name="texttodos_os_itens">Todos os itens</string>
     <string name="txt_dia_em_que_ir_come_ar_apenas_quinzenal">Dia em que irá começar(apenas quinzenal)</string>
     <string name="text_dia_apenas_se_quinzenal">Início(Apenas se quinzenal)</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 
 </resources>
