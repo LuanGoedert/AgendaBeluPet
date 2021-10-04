@@ -2015,6 +2015,7 @@ id action_fragment_agenda_to_dogListFragment
 id action_global_fragment_agenda
 id action_global_new_plan_fragment
 id action_image
+id action_loginFragment_to_fragment_agenda
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -2072,6 +2073,7 @@ id cache_measures
 id cancel_action
 id cancel_button
 id cardView
+id cardView2
 id card_itemInformation
 id card_pet_name
 id card_pet_name_collected
@@ -2181,6 +2183,7 @@ id fragment_container_view_tag
 id frost
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -2202,7 +2205,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id image_dialog
 id immediateStop
 id included
@@ -2226,6 +2228,7 @@ id line3
 id linear
 id listMode
 id list_item
+id loginFragment
 id masked
 id match_constraint
 id match_parent
@@ -2378,6 +2381,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signInButton
 id sin
 id skipCollapsed
 id skipped
@@ -2437,6 +2441,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
 id textWatcher
 id text_collected
 id text_district
@@ -2464,6 +2470,7 @@ id text_value
 id text_warning
 id text_week_day
 id text_weekday_collected
+id text_welcome
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2492,6 +2499,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userImage
 id value_date_picker
 id value_text
 id vertical_only
@@ -2614,6 +2622,7 @@ layout fragment_item_information
 layout fragment_new_plan
 layout fragment_profit
 layout list_item
+layout login_fragment
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2900,6 +2909,7 @@ string text_tirar_foto_opcional
 string text_todos
 string text_value
 string text_wait
+string texttabela_de_lucros
 string texttodos_os_itens
 string title_activity_navigation_drawer_activity
 string title_dashboard

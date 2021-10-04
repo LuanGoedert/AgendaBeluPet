@@ -4,9 +4,11 @@ import androidx.room.Room
 import com.example.agendabelupet.database.AppDataBase
 import com.example.agendabelupet.interfaces.ItemRepository
 import com.example.agendabelupet.repository.ItemRepositoryImpl
+import com.example.agendabelupet.repository.UserRepositoryImpl
 import com.example.agendabelupet.ui.agenda.AgendaViewModel
 import com.example.agendabelupet.ui.collected.CollectedItemsViewModel
 import com.example.agendabelupet.ui.dogList.DogListViewModel
+import com.example.agendabelupet.ui.login.LoginViewModel
 import com.example.agendabelupet.ui.newPlan.NewPlanViewModel
 import com.example.agendabelupet.ui.profit.ProfitViewModel
 import org.koin.android.ext.koin.androidApplication
@@ -26,6 +28,8 @@ val appModule = module {
     }
     single { get<AppDataBase>().itemDao() }
 
+    single { get<AppDataBase>().userDao() }
+
 
     factory {
         ItemRepositoryImpl(
@@ -33,9 +37,23 @@ val appModule = module {
         )
     }
 
+    factory {
+        UserRepositoryImpl(
+            userDao = get()
+        )
+    }
+
+    viewModel {
+        LoginViewModel(
+            application = androidApplication(),
+            userRepositoryImpl = get()
+        )
+    }
+
     viewModel {
         AgendaViewModel(
             application = androidApplication(),
+            userRepositoryImpl = get(),
             itemRepositoryImpl = get()
         )
     }

@@ -84,6 +84,10 @@
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\drawable\\ic_baseline_calendar_today_24.xml"
     },
     {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_fragment.xml.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\login_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_24.xml.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
     },

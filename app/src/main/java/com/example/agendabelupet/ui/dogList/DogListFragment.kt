@@ -13,6 +13,7 @@ import com.example.agendabelupet.R
 import com.example.agendabelupet.databinding.FragmentDogListBinding
 import com.example.agendabelupet.models.entities.ItemEntity
 import com.example.agendabelupet.utils.CustomDialogsExt
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

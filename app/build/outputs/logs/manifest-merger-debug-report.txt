@@ -6,6 +6,7 @@ INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.x
 INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [androidx.databinding:databinding-adapters:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ad2e55da6ef8aad24967a68d8ebec350\databinding-adapters-4.1.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\feb1d1d771f1a22a759351c199082b3a\databinding-runtime-4.1.3\AndroidManifest.xml:17:1-24:12
+MERGED from [com.firebaseui:firebase-ui-storage:7.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\965f437afe8962e92a5e87c5d00a326b\jetified-firebase-ui-storage-7.2.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-firestore-ktx:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fda1fd9befdb686a491f846da14fc664\jetified-firebase-firestore-ktx-23.0.3\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\51a8e68fb4cf59e8587b3e5793cb4cc1\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1a463fc49b6bf5deb2a6645aaa10edcc\jetified-firebase-auth-21.0.1\AndroidManifest.xml:17:1-83:12
@@ -52,6 +53,7 @@ MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\L
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7b5177dcd3e870ccda97bb18c6ea5d0e\jetified-play-services-base-17.5.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\0b72cf869497c832927680245fef8846\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e27c9097dfd266e47723953478fea443\jetified-play-services-basement-17.5.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\552f897128fdcd2cafa1d9330bf2e049\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\15f4001029cae0616798368b46a56f9e\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\bba4681f284334fb0dc40c0dc5d312e0\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e7272d474923fafeacc3dbed2512ee10\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -95,6 +97,8 @@ MERGED from [androidx.sqlite:sqlite:2.2.0-alpha02] C:\Users\Luan\.gradle\caches\
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\2c9b163b57265aded337caf77e3a229b\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\0f5019b783fd7094e4f8d98ab3277ed5\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fc723747f38e284e762fc53698ac3f03\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1f15d1d0ad8d0726999d9768e2e851f7\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ee3630f065e7a461a5a7a438207dec75\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.koin:koin-android:2.2.2] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\853dbfb7a0818434cea51a28c24416d5\jetified-koin-android-2.2.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7547777f33609bc718fc23cc5d21fc71\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\c4a3a2c06306da39400a8a4f6ffc5406\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
@@ -178,6 +182,8 @@ MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Luan\.g
 MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\0b72cf869497c832927680245fef8846\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e27c9097dfd266e47723953478fea443\jetified-play-services-basement-17.5.0\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e27c9097dfd266e47723953478fea443\jetified-play-services-basement-17.5.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\552f897128fdcd2cafa1d9330bf2e049\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\552f897128fdcd2cafa1d9330bf2e049\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [androidx.room:room-runtime:2.4.0-alpha04] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\5bb641c0347a8cc5adfb55f253830d7a\room-runtime-2.4.0-alpha04\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.room:room-runtime:2.4.0-alpha04] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\5bb641c0347a8cc5adfb55f253830d7a\room-runtime-2.4.0-alpha04\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\4788bba0f8a44ce8b7be63c8b6108501\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
@@ -186,6 +192,8 @@ MERGED from [androidx.core:core:1.6.0] C:\Users\Luan\.gradle\caches\transforms-2
 MERGED from [androidx.core:core:1.6.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e8072191b7b41e5e30b55b6258d9eddf\core-1.6.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7252d2c2fec942198782a2077472df90\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7252d2c2fec942198782a2077472df90\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1f15d1d0ad8d0726999d9768e2e851f7\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1f15d1d0ad8d0726999d9768e2e851f7\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e8072191b7b41e5e30b55b6258d9eddf\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
@@ -230,6 +238,8 @@ MERGED from [androidx.databinding:databinding-adapters:4.1.3] C:\Users\Luan\.gra
 MERGED from [androidx.databinding:databinding-adapters:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ad2e55da6ef8aad24967a68d8ebec350\databinding-adapters-4.1.3\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\feb1d1d771f1a22a759351c199082b3a\databinding-runtime-4.1.3\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\feb1d1d771f1a22a759351c199082b3a\databinding-runtime-4.1.3\AndroidManifest.xml:22:5-44
+MERGED from [com.firebaseui:firebase-ui-storage:7.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\965f437afe8962e92a5e87c5d00a326b\jetified-firebase-ui-storage-7.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-storage:7.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\965f437afe8962e92a5e87c5d00a326b\jetified-firebase-ui-storage-7.2.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore-ktx:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fda1fd9befdb686a491f846da14fc664\jetified-firebase-firestore-ktx-23.0.3\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-firestore-ktx:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fda1fd9befdb686a491f846da14fc664\jetified-firebase-firestore-ktx-23.0.3\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\51a8e68fb4cf59e8587b3e5793cb4cc1\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:5:5-44
@@ -322,6 +332,8 @@ MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Luan\.g
 MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\0b72cf869497c832927680245fef8846\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e27c9097dfd266e47723953478fea443\jetified-play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e27c9097dfd266e47723953478fea443\jetified-play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\552f897128fdcd2cafa1d9330bf2e049\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\552f897128fdcd2cafa1d9330bf2e049\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\15f4001029cae0616798368b46a56f9e\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\15f4001029cae0616798368b46a56f9e\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\bba4681f284334fb0dc40c0dc5d312e0\viewpager-1.0.0\AndroidManifest.xml:20:5-44
@@ -408,6 +420,10 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luan\.gradle\cac
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\0f5019b783fd7094e4f8d98ab3277ed5\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fc723747f38e284e762fc53698ac3f03\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fc723747f38e284e762fc53698ac3f03\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1f15d1d0ad8d0726999d9768e2e851f7\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1f15d1d0ad8d0726999d9768e2e851f7\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ee3630f065e7a461a5a7a438207dec75\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ee3630f065e7a461a5a7a438207dec75\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [org.koin:koin-android:2.2.2] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\853dbfb7a0818434cea51a28c24416d5\jetified-koin-android-2.2.2\AndroidManifest.xml:5:5-44
 MERGED from [org.koin:koin-android:2.2.2] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\853dbfb7a0818434cea51a28c24416d5\jetified-koin-android-2.2.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7547777f33609bc718fc23cc5d21fc71\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="all">
+    <group android:checkableBehavior="all"
+        >
         <item
             android:id="@+id/fragment_agenda"
             android:title="@string/text_agenda"
@@ -15,6 +16,12 @@
             android:title="@string/texttodos_os_itens"
             android:icon="@drawable/ic_pet"
             android:iconTint="@color/light_blue"
+            />
+        <item
+            android:id="@+id/profit_fragment"
+            android:title="@string/texttabela_de_lucros"
+            android:icon="@drawable/ic_baseline_attach_money_24"
+            android:iconTint="@color/green"
             />
     </group>
 </menu>

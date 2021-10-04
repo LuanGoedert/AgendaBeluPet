@@ -16,6 +16,8 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
 import com.example.agendabelupet.dao.ItemDao;
 import com.example.agendabelupet.dao.ItemDao_Impl;
+import com.example.agendabelupet.dao.UserDao;
+import com.example.agendabelupet.dao.UserDao_Impl;
 import java.lang.Class;
 import java.lang.Override;
 import java.lang.String;
@@ -28,6 +30,8 @@ import java.util.Set;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class AppDataBase_Impl extends AppDataBase {
+  private volatile UserDao _userDao;
+
   private volatile ItemDao _itemDao;
 
   @Override
@@ -36,13 +40,15 @@ public final class AppDataBase_Impl extends AppDataBase {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `ItemEntity` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ownerName` TEXT NOT NULL, `name` TEXT NOT NULL, `race` TEXT NOT NULL, `weekDay` TEXT NOT NULL, `plan` TEXT NOT NULL, `value` INTEGER NOT NULL, `phone` TEXT NOT NULL, `district` TEXT NOT NULL, `street` TEXT NOT NULL, `houseNumer` TEXT NOT NULL, `collected` INTEGER NOT NULL, `dataQuinzenal` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `UserEntity` (`userId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `userName` TEXT NOT NULL, `userEmail` TEXT NOT NULL, `userPhotoUri` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '09e895a39a483d3cd565982277a298ab')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7a30766e78e16e7372f06baa4ed82f92')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `ItemEntity`");
+        _db.execSQL("DROP TABLE IF EXISTS `UserEntity`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -104,9 +110,23 @@ public final class AppDataBase_Impl extends AppDataBase {
                   + " Expected:\n" + _infoItemEntity + "\n"
                   + " Found:\n" + _existingItemEntity);
         }
+        final HashMap<String, TableInfo.Column> _columnsUserEntity = new HashMap<String, TableInfo.Column>(4);
+        _columnsUserEntity.put("userId", new TableInfo.Column("userId", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUserEntity.put("userName", new TableInfo.Column("userName", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUserEntity.put("userEmail", new TableInfo.Column("userEmail", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUserEntity.put("userPhotoUri", new TableInfo.Column("userPhotoUri", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysUserEntity = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesUserEntity = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoUserEntity = new TableInfo("UserEntity", _columnsUserEntity, _foreignKeysUserEntity, _indicesUserEntity);
+        final TableInfo _existingUserEntity = TableInfo.read(_db, "UserEntity");
+        if (! _infoUserEntity.equals(_existingUserEntity)) {
+          return new RoomOpenHelper.ValidationResult(false, "UserEntity(com.example.agendabelupet.models.entities.UserEntity).\n"
+                  + " Expected:\n" + _infoUserEntity + "\n"
+                  + " Found:\n" + _existingUserEntity);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "09e895a39a483d3cd565982277a298ab", "61a29e5c356efe24feaee71afacda93e");
+    }, "7a30766e78e16e7372f06baa4ed82f92", "9a59d00b20927888459ea9c9cc4e924d");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -119,7 +139,7 @@ public final class AppDataBase_Impl extends AppDataBase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "ItemEntity");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "ItemEntity","UserEntity");
   }
 
   @Override
@@ -129,6 +149,7 @@ public final class AppDataBase_Impl extends AppDataBase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `ItemEntity`");
+      _db.execSQL("DELETE FROM `UserEntity`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -142,8 +163,23 @@ public final class AppDataBase_Impl extends AppDataBase {
   @Override
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
+    _typeConvertersMap.put(UserDao.class, UserDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(ItemDao.class, ItemDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
+  }
+
+  @Override
+  public UserDao userDao() {
+    if (_userDao != null) {
+      return _userDao;
+    } else {
+      synchronized(this) {
+        if(_userDao == null) {
+          _userDao = new UserDao_Impl(this);
+        }
+        return _userDao;
+      }
+    }
   }
 
   @Override

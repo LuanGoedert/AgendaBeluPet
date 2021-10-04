@@ -1,5 +1,6 @@
 package com.example.agendabelupet.ui.agenda
 
+import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,20 +12,28 @@ import android.widget.AutoCompleteTextView
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
+import androidx.core.net.toFile
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.agendabelupet.R
 import com.example.agendabelupet.adapters.AbstractRecyclerAdapter
 import com.example.agendabelupet.adapters.DogListAdapter
 import com.example.agendabelupet.databinding.FragmentAgendaBinding
 import com.example.agendabelupet.models.entities.ItemEntity
+import com.example.agendabelupet.ui.dogList.DogListFragmentArgs
 import com.example.agendabelupet.utils.CustomDialogsExt
 import com.example.agendabelupet.utils.WeekDaysString
+import com.google.android.material.navigation.NavigationView
+import com.squareup.picasso.Picasso
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import kotlinx.android.synthetic.main.nav_header_main.*
+import java.io.File
 
 
 class AgendaFragment : Fragment() {
@@ -37,7 +46,12 @@ class AgendaFragment : Fragment() {
 
     private lateinit var navController: NavController
 
+
     private lateinit var customDialogsExt: CustomDialogsExt
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -57,12 +71,14 @@ class AgendaFragment : Fragment() {
         navController = NavController(requireContext())
 
 
+
         activity?.findViewById<TextView>(R.id.text_toolbar_main)?.text =
             getString(R.string.text_agenda)
+
         val items = WeekDaysString()
         val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items.loadWeekDays())
 
-        viewModel.weekDay.observe(viewLifecycleOwner){
+        viewModel.weekDay.observe(viewLifecycleOwner) {
             it?.let {
                 viewModel.viewModelScope.launch { viewModel.getDogsFromDatabase(it) }
             }
@@ -70,11 +86,14 @@ class AgendaFragment : Fragment() {
 
         (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(adapter)
 
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             return@addCallback
         }
 
         customDialogsExt = CustomDialogsExt(requireActivity())
+
+
+
 
 
         viewModel.itensFromDb.observe(viewLifecycleOwner) {
@@ -83,17 +102,17 @@ class AgendaFragment : Fragment() {
             }
         }
 
-        binding.button.setOnClickListener{
+        binding.button.setOnClickListener {
             viewModel.initLoading().invokeOnCompletion {
                 navigateToNewPlanFragment(ItemEntity())
             }
         }
 
-        viewModel.loadingScreen.observe(viewLifecycleOwner){
+        viewModel.loadingScreen.observe(viewLifecycleOwner) {
             it?.let {
-                if(it){
+                if (it) {
                     customDialogsExt.startProgressBar()
-                }else {
+                } else {
                     customDialogsExt.dismissCustomFragment()
                 }
             }
@@ -107,7 +126,6 @@ class AgendaFragment : Fragment() {
             }
         })
     }
-
 
 
     private fun iniciaRecyclerView(listaItens: MutableList<ItemEntity>?) {
@@ -128,15 +146,15 @@ class AgendaFragment : Fragment() {
 
     private fun navigateToScreen(item: ItemEntity) {
         val action = AgendaFragmentDirections.actionFragmentAgendaToDogListFragment(item)
-            findNavController().navigate(action)
+        findNavController().navigate(action)
     }
 
-    private fun navigateToNewPlanFragment(item: ItemEntity){
+    private fun navigateToNewPlanFragment(item: ItemEntity) {
         val action = AgendaFragmentDirections.actionGlobalNewPlanFragment(item)
-            findNavController().navigate(action)
+        findNavController().navigate(action)
     }
 
-    private fun doNothing(view: View) { }
+    private fun doNothing(view: View) {}
 
     override fun onDestroyView() {
         viewModel.stopLoading()

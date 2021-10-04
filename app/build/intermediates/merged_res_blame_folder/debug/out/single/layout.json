@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\login_fragment.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\login_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agenda.xml",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_agenda.xml"
     },

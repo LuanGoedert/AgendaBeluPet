@@ -6,13 +6,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.agendabelupet.models.entities.ItemEntity
+import com.example.agendabelupet.models.entities.UserEntity
 import com.example.agendabelupet.repository.ItemRepositoryImpl
+import com.example.agendabelupet.repository.UserRepositoryImpl
 import kotlinx.coroutines.launch
 import java.util.*
 
 class AgendaViewModel(
     application: Application,
-    private val itemRepositoryImpl: ItemRepositoryImpl
+    private val itemRepositoryImpl: ItemRepositoryImpl,
+    private val userRepositoryImpl: UserRepositoryImpl
 ) : AndroidViewModel(application) {
 
     val mWeekDay = MutableLiveData<String>("")
@@ -25,7 +28,7 @@ class AgendaViewModel(
     var itensFromDb: LiveData<List<ItemEntity>> = _itensFromDb
 
     val mLoadingScreen = MutableLiveData<Boolean>()
-    val loadingScreen : LiveData<Boolean>
+    val loadingScreen: LiveData<Boolean>
         get() {
             return mLoadingScreen
         }
@@ -37,11 +40,11 @@ class AgendaViewModel(
         }
     }
 
-    fun initLoading() = viewModelScope.launch{
+    fun initLoading() = viewModelScope.launch {
         mLoadingScreen.value = true
     }
 
-    fun stopLoading()= viewModelScope.launch{
+    fun stopLoading() = viewModelScope.launch {
         mLoadingScreen.value = false
     }
 

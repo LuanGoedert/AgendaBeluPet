@@ -11,6 +11,7 @@ import com.example.agendabelupet.databinding.FragmentCollectedItemsBindingImpl;
 import com.example.agendabelupet.databinding.FragmentDogListBindingImpl;
 import com.example.agendabelupet.databinding.FragmentNewPlanBindingImpl;
 import com.example.agendabelupet.databinding.FragmentProfitBindingImpl;
+import com.example.agendabelupet.databinding.LoginFragmentBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -32,7 +33,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTPROFIT = 5;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(5);
+  private static final int LAYOUT_LOGINFRAGMENT = 6;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(6);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.agendabelupet.R.layout.fragment_agenda, LAYOUT_FRAGMENTAGENDA);
@@ -40,6 +43,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.agendabelupet.R.layout.fragment_dog_list, LAYOUT_FRAGMENTDOGLIST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.agendabelupet.R.layout.fragment_new_plan, LAYOUT_FRAGMENTNEWPLAN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.agendabelupet.R.layout.fragment_profit, LAYOUT_FRAGMENTPROFIT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.agendabelupet.R.layout.login_fragment, LAYOUT_LOGINFRAGMENT);
   }
 
   @Override
@@ -80,6 +84,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentProfitBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_profit is invalid. Received: " + tag);
+        }
+        case  LAYOUT_LOGINFRAGMENT: {
+          if ("layout/login_fragment_0".equals(tag)) {
+            return new LoginFragmentBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for login_fragment is invalid. Received: " + tag);
         }
       }
     }
@@ -135,7 +145,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(5);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(6);
 
     static {
       sKeys.put("layout/fragment_agenda_0", com.example.agendabelupet.R.layout.fragment_agenda);
@@ -143,6 +153,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_dog_list_0", com.example.agendabelupet.R.layout.fragment_dog_list);
       sKeys.put("layout/fragment_new_plan_0", com.example.agendabelupet.R.layout.fragment_new_plan);
       sKeys.put("layout/fragment_profit_0", com.example.agendabelupet.R.layout.fragment_profit);
+      sKeys.put("layout/login_fragment_0", com.example.agendabelupet.R.layout.login_fragment);
     }
   }
 }
