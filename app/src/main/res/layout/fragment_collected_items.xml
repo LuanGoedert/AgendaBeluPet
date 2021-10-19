@@ -48,17 +48,18 @@
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_collected"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/select_collected"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/select_collected"
-
-        tools:listitem="@layout/collected_items"
-        />
+        android:layout_marginBottom="10dp"
+        tools:listitem="@layout/collected_items" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

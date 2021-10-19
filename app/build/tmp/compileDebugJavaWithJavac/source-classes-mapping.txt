@@ -32,12 +32,16 @@ com/example/agendabelupet/dao/UserDao_Impl.java
  com.example.agendabelupet.dao.UserDao_Impl$5
  com.example.agendabelupet.dao.UserDao_Impl$6
  com.example.agendabelupet.dao.UserDao_Impl$7
+ com.example.agendabelupet.dao.UserDao_Impl$8
+ com.example.agendabelupet.dao.UserDao_Impl$9
 com/example/agendabelupet/MobileNavigationDirections.java
  com.example.agendabelupet.MobileNavigationDirections
  com.example.agendabelupet.MobileNavigationDirections$1
  com.example.agendabelupet.MobileNavigationDirections$ActionGlobalNewPlanFragment
 com/example/agendabelupet/databinding/FragmentNewPlanBinding.java
  com.example.agendabelupet.databinding.FragmentNewPlanBinding
+com/example/agendabelupet/databinding/FragmentSettingsBinding.java
+ com.example.agendabelupet.databinding.FragmentSettingsBinding
 com/example/agendabelupet/ui/collected/CollectedItemsFragmentDirections.java
  com.example.agendabelupet.ui.collected.CollectedItemsFragmentDirections
  com.example.agendabelupet.ui.collected.CollectedItemsFragmentDirections$1
@@ -60,6 +64,11 @@ com/example/agendabelupet/dao/ItemDao_Impl.java
  com.example.agendabelupet.dao.ItemDao_Impl$2
  com.example.agendabelupet.dao.ItemDao_Impl$20
  com.example.agendabelupet.dao.ItemDao_Impl$21
+ com.example.agendabelupet.dao.ItemDao_Impl$22
+ com.example.agendabelupet.dao.ItemDao_Impl$23
+ com.example.agendabelupet.dao.ItemDao_Impl$24
+ com.example.agendabelupet.dao.ItemDao_Impl$25
+ com.example.agendabelupet.dao.ItemDao_Impl$26
  com.example.agendabelupet.dao.ItemDao_Impl$3
  com.example.agendabelupet.dao.ItemDao_Impl$4
  com.example.agendabelupet.dao.ItemDao_Impl$5
@@ -95,6 +104,10 @@ com/example/agendabelupet/ui/newPlan/NewPlanFragmentArgs.java
  com.example.agendabelupet.ui.newPlan.NewPlanFragmentArgs$Builder
 com/example/agendabelupet/databinding/FragmentAgendaBinding.java
  com.example.agendabelupet.databinding.FragmentAgendaBinding
+com/example/agendabelupet/databinding/FragmentSettingsBindingImpl.java
+ com.example.agendabelupet.databinding.FragmentSettingsBindingImpl
+com/example/agendabelupet/ui/settings/SettingsFragmentDirections.java
+ com.example.agendabelupet.ui.settings.SettingsFragmentDirections
 com/example/agendabelupet/databinding/FragmentProfitBindingImpl.java
  com.example.agendabelupet.databinding.FragmentProfitBindingImpl
 androidx/databinding/DataBindingComponent.java

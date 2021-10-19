@@ -25,6 +25,7 @@ MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Luan\.gradle\caches\
 MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\d2b75984fa4f197ec931b4457b16e118\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7e3e452f2d08e279b8c5c888824f7fe9\jetified-core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\644f6b9a42e7a60fd94e6b15c65fe90d\constraintlayout-2.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\dce9b780b6ef147237edad4657bdf352\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ec0797c244d1357ec162e18edc54d2be\jetified-viewbinding-4.1.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f1fdbf82dc86c1997f35bab349369421\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:2:1-21:12
@@ -158,6 +159,8 @@ MERGED from [org.koin:koin-androidx-scope:2.2.2] C:\Users\Luan\.gradle\caches\tr
 MERGED from [org.koin:koin-androidx-scope:2.2.2] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\788b2dd0d04f94f17756e3037ae53702\jetified-koin-androidx-scope-2.2.2\AndroidManifest.xml:7:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\644f6b9a42e7a60fd94e6b15c65fe90d\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\644f6b9a42e7a60fd94e6b15c65fe90d\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:28:5-20
+MERGED from [com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:28:5-20
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f1fdbf82dc86c1997f35bab349369421\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f1fdbf82dc86c1997f35bab349369421\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\21a6374a8fa7d9007072ae54058b3c1f\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:16:5-24:19
@@ -276,6 +279,8 @@ MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Luan\.gradle\caches\transfor
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7e3e452f2d08e279b8c5c888824f7fe9\jetified-core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\644f6b9a42e7a60fd94e6b15c65fe90d\constraintlayout-2.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\644f6b9a42e7a60fd94e6b15c65fe90d\constraintlayout-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:22:5-24:41
+MERGED from [com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:22:5-24:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\dce9b780b6ef147237edad4657bdf352\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\dce9b780b6ef147237edad4657bdf352\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:viewbinding:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ec0797c244d1357ec162e18edc54d2be\jetified-viewbinding-4.1.3\AndroidManifest.xml:20:5-44
@@ -562,6 +567,10 @@ ADDED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\Luan\.grad
 		ADDED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\86d9422e295a3a1e943238c01c8b5c70\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:17:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\86d9422e295a3a1e943238c01c8b5c70\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:16:17-122
+uses-permission#android.permission.VIBRATE
+ADDED from [com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:26:5-66
+	android:name
+		ADDED from [com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:26:22-63
 meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar
 ADDED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f1fdbf82dc86c1997f35bab349369421\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:15:13-17:85
 	android:value

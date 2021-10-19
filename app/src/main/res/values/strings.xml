@@ -101,5 +101,17 @@
     <string name="text_fill_all_fields">Preencha todos os campos necessários</string>
     <string name="text_atencao">Atenção!\n selecione o dia da semana a opção quinzenal</string>
     <string name="text_item_avulso">O Item foi marcado como coletado e será excluído logo após por ser Avulso</string>
-
+    <string name="test_wrong_day">O dia selecionado no calendario precisa ser o mesmo da semana</string>
+    <string name="text_confirmationn_firebase">todos os Itens locais serão substituidos pelos arquivos em nuvem</string>
+    <string name="text_sim">sim</string>
+    <string name="text_n_o">Não</string>
+    <string name="text_sair">sair</string>
+    <string name="text_obter_dados_salvos_na_online">Obter dados salvos online</string>
+    <string name="text_sucess_on_sync">Sucesso ao sincronizar com a nuvem</string>
+    <string name="text_error_on_sync">Erro ao sincronizar os dados com a nuvem</string>
+    <string name="text_excluir_conta">Excluir conta</string>
+    <string name="text_logoff">Sair do aplicativo?</string>
+    <string name="text_delete_account">Excluir conta?</string>
+    <string name="text_succes_delete_account">Conta deletada com sucesso!</string>
+    <string name="text_error_on_delete_account">Erro ao tentar deletar a conta</string>
 </resources>

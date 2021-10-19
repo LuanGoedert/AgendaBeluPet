@@ -72,16 +72,11 @@ class AgendaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navController = NavController(requireContext())
 
-        val items = WeekDaysString()
-
-        val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items.loadWeekDays())
-        (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(adapter)
-
-        activity?.findViewById<TextView>(R.id.text_toolbar_main)?.text = getString(R.string.text_agenda)
-
-        viewModel.weekDay.observe(viewLifecycleOwner) {
-            it?.let {
-                viewModel.viewModelScope.launch { viewModel.getDogsFromDatabase(it) }
+        viewModel.viewModelScope.launch {
+            binding.selectWeekDay.editText?.setText(viewModel.getActualDay())
+            viewModel.initAdapter(requireContext()).invokeOnCompletion {
+                (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(viewModel.mAdapter.value)
+                viewModel.viewModelScope.launch { viewModel.getDogsFromDatabase(binding.selectWeekDay.editText?.text?.toString()!!) }
             }
         }
 
@@ -114,10 +109,15 @@ class AgendaFragment : Fragment() {
         }
 
         binding.selectWeekDay.editText?.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+            }
             override fun afterTextChanged(s: Editable) {
                 viewModel.viewModelScope.launch { viewModel.getDogsFromDatabase(binding.selectWeekDay.editText?.text?.toString()!!) }
+                viewModel.initAdapter(requireContext()).invokeOnCompletion {
+                    (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(viewModel.mAdapter.value)
+                }
             }
         })
     }
@@ -152,6 +152,7 @@ class AgendaFragment : Fragment() {
     override fun onDestroyView() {
         viewModel.stopLoading()
         customDialogsExt.dismissCustomFragment()
+        (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(viewModel.mAdapter.value)
         super.onDestroyView()
     }
 }

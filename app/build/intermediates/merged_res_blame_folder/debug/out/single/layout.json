@@ -22,5 +22,9 @@
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_new_plan.xml",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_new_plan.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_settings.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_settings.xml"
     }
 ]

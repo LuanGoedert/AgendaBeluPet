@@ -58,14 +58,12 @@ class NewPlanFragment : Fragment() {
         val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items.loadWeekDays())
 
         val myCalendar = Calendar.getInstance()
-
-        val datePickerDialog = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+        val datePickerDialog = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
             myCalendar.set(Calendar.YEAR, year)
             myCalendar.set(Calendar.MONTH, month)
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
             updatelable(myCalendar)
         }
-
         setItemOnScreen()
 
         binding.valueDatePicker.setOnClickListener {
@@ -74,7 +72,7 @@ class NewPlanFragment : Fragment() {
                 datePickerDialog,
                 myCalendar.get(Calendar.YEAR),
                 myCalendar.get(Calendar.MONTH),
-                myCalendar.get(Calendar.DAY_OF_MONTH)
+                myCalendar.get(Calendar.DAY_OF_MONTH),
             ).show()
         }
 
@@ -83,16 +81,30 @@ class NewPlanFragment : Fragment() {
         (binding.textWeekDay.editText as? AutoCompleteTextView)?.setAdapter(adapter)
         (binding.planText.editText as? AutoCompleteTextView)?.setAdapter(planAdapter)
 
+        viewModel.wrongDaySet.observe(viewLifecycleOwner) {
+            it?.let {
+                if (!it) {
+                    customDialog.defaultDialog(
+                        title = R.string.test_wrong_day,
+                        image = R.drawable.icone_erro
+                    ) {
+                        viewModel.wrongDaySet.postValue(true)
+                        customDialog.dismissCustomFragment()
+                    }
+                }
+            }
+        }
+
         viewModel.isItemSaved.observe(viewLifecycleOwner) {
             if (it) {
                 customDialog.defaultDialog(
                     title = R.string.text_saved,
-                    image = R.drawable.icone_sucesso,
-                    onPositive = {
-                        viewModel._isItemSaved.postValue(false)
-                        customDialog.dismissCustomFragment()
-                        goToDogListFragment()
-                    })
+                    image = R.drawable.icone_sucesso
+                ) {
+                    viewModel._isItemSaved.postValue(false)
+                    customDialog.dismissCustomFragment()
+                    goToDogListFragment()
+                }
             }
         }
 
@@ -112,55 +124,63 @@ class NewPlanFragment : Fragment() {
 
         binding.buttonSaveItem.setOnClickListener {
             viewModel.viewModelScope.launch {
-                if (binding.editTextName.text?.isNotEmpty() == true &&
-                    binding.textRaca.text?.isNotEmpty() == true &&
-                    binding.textEndereco.text?.isNotEmpty() == true
-                ) {
-                    if (itemByArgs?.newPlanArgument?.id == 0) {
-                        viewModel.saveDog(
-                            ItemEntity(
-                                ownerName = binding.editTextNameOwner.text.toString(),
-                                phone = binding.phoneText.editText!!.text.toString(),
-                                name = binding.editTextName.text.toString(),
-                                race = binding.textRaca.text.toString(),
-                                street = binding.textEndereco.text.toString(),
-                                weekDay = binding.textWeekDay.editText!!.text.toString(),
-                                planType = binding.planText.editText!!.text.toString(),
-                                value = binding.valueText.editText!!.text.toString().toInt(),
-                                district = binding.districtText.editText!!.text.toString(),
-                                houseNumber = binding.houseNumberText.editText!!.text.toString(),
-                                dataQuinzenal = binding.valueDatePicker.text.toString(),
-                            )
-                        )
-                    } else {
-                        try {
-                            val itemToUpdate = ItemEntity(
-                                id = itemByArgs?.newPlanArgument!!.id,
-                                ownerName = binding.editTextNameOwner.text.toString(),
-                                phone = binding.phoneText.editText!!.text.toString(),
-                                name = binding.editTextName.text.toString(),
-                                race = binding.textRaca.text.toString(),
-                                street = binding.textEndereco.text.toString(),
-                                weekDay = binding.textWeekDay.editText!!.text.toString(),
-                                planType = binding.planText.editText!!.text.toString(),
-                                value = binding.valueText.editText!!.text.toString().toInt(),
-                                district = binding.districtText.editText!!.text.toString(),
-                                houseNumber = binding.houseNumberText.editText!!.text.toString(),
-                                dataQuinzenal = binding.valueDatePicker.text.toString(),
-                            )
-                            viewModel.updateDog(itemToUpdate)
-                        } catch (ex: Exception) {
-                            Log.e("erro no update", ex.message.toString())
-                        }
-                    }
+                if (!checkWeekDays()) {
+                    viewModel.wrongDaySet.postValue(false)
                 } else {
-                    customDialog.defaultDialog(
-                        title = R.string.text_fill_all_fields,
-                        image = R.drawable.icone_erro,
-                        onPositive = {
+                    if (binding.editTextName.text?.isNotEmpty() == true &&
+                        binding.textRaca.text?.isNotEmpty() == true &&
+                        binding.textEndereco.text?.isNotEmpty() == true
+                    ) {
+                        var dataQuinzenalText = ""
+                        if (binding.planText.editText!!.text.toString() == "Quinzenal") {
+                            dataQuinzenalText = binding.valueDatePicker.text.toString()
+                        }
+
+                        if (itemByArgs?.newPlanArgument?.id == 0) {
+                            viewModel.saveDog(
+                                ItemEntity(
+                                    ownerName = binding.editTextNameOwner.text.toString(),
+                                    phone = binding.phoneText.editText!!.text.toString(),
+                                    name = binding.editTextName.text.toString(),
+                                    race = binding.textRaca.text.toString(),
+                                    street = binding.textEndereco.text.toString(),
+                                    weekDay = binding.textWeekDay.editText!!.text.toString(),
+                                    planType = binding.planText.editText!!.text.toString(),
+                                    value = binding.valueText.editText!!.text.toString().toInt(),
+                                    district = binding.districtText.editText!!.text.toString(),
+                                    houseNumber = binding.houseNumberText.editText!!.text.toString(),
+                                    dataQuinzenal = dataQuinzenalText
+                                ), requireContext()
+                            )
+                        } else {
+                            try {
+                                val itemToUpdate = ItemEntity(
+                                    id = itemByArgs?.newPlanArgument!!.id,
+                                    ownerName = binding.editTextNameOwner.text.toString(),
+                                    phone = binding.phoneText.editText!!.text.toString(),
+                                    name = binding.editTextName.text.toString(),
+                                    race = binding.textRaca.text.toString(),
+                                    street = binding.textEndereco.text.toString(),
+                                    weekDay = binding.textWeekDay.editText!!.text.toString(),
+                                    planType = binding.planText.editText!!.text.toString(),
+                                    value = binding.valueText.editText!!.text.toString().toInt(),
+                                    district = binding.districtText.editText!!.text.toString(),
+                                    houseNumber = binding.houseNumberText.editText!!.text.toString(),
+                                    dataQuinzenal = dataQuinzenalText
+                                )
+                                viewModel.updateDog(requireContext(), itemToUpdate)
+                            } catch (ex: Exception) {
+                                Log.e("erro no update", ex.message.toString())
+                            }
+                        }
+                    } else {
+                        customDialog.defaultDialog(
+                            title = R.string.text_fill_all_fields,
+                            image = R.drawable.icone_erro
+                        ) {
                             customDialog.dismissCustomFragment()
                         }
-                    )
+                    }
                 }
             }
         }
@@ -169,14 +189,27 @@ class NewPlanFragment : Fragment() {
 
     private fun updatelable(myCalendar: Calendar) {
         val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-
+        viewModel.dayOfWeek.postValue(myCalendar.get(Calendar.DAY_OF_WEEK))
         binding.valueDatePicker.text = sdf.format(myCalendar.time)
-
     }
 
     private fun goToDogListFragment() {
         val action = NewPlanFragmentDirections.actionNavigationDashboardToFragmentAgenda()
         findNavController().navigate(action)
+    }
+
+    private fun checkWeekDays(): Boolean {
+        if (((binding.textWeekDay.editText!!.text.toString() == "Segunda" && viewModel.dayOfWeek.value != 2) ||
+            (binding.textWeekDay.editText!!.text.toString() == "Terça" && viewModel.dayOfWeek.value != 3) ||
+            (binding.textWeekDay.editText!!.text.toString() == "Quarta" && viewModel.dayOfWeek.value != 4) ||
+            (binding.textWeekDay.editText!!.text.toString() == "Quinta" && viewModel.dayOfWeek.value != 5) ||
+            (binding.textWeekDay.editText!!.text.toString() == "Sexta" && viewModel.dayOfWeek.value != 6) ||
+            (binding.textWeekDay.editText!!.text.toString() == "Sábado" && viewModel.dayOfWeek.value != 7))
+            &&(binding.planText.editText?.text.toString() == "Quinzenal")
+        ) {
+            return false
+        }
+        return true
     }
 
     private fun setItemOnScreen() {

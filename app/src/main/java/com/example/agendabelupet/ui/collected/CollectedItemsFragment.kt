@@ -22,14 +22,17 @@ import com.example.agendabelupet.models.entities.ItemEntity
 import com.example.agendabelupet.ui.agenda.AgendaFragmentDirections
 import com.example.agendabelupet.ui.agenda.AgendaFragmentDirections.actionFragmentAgendaToDogListFragment
 import com.example.agendabelupet.utils.CollectedList
+import com.example.agendabelupet.utils.CustomDialogsExt
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.*
 
 class CollectedItemsFragment : Fragment() {
 
-    private lateinit var binding : FragmentCollectedItemsBinding
+    private lateinit var binding: FragmentCollectedItemsBinding
     private lateinit var adapter: AllDogsAdapter
+
+    private lateinit var customDialogsExt: CustomDialogsExt
 
     private val viewModel: CollectedItemsViewModel by viewModel()
 
@@ -47,32 +50,51 @@ class CollectedItemsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val collectedItems = CollectedList()
+        customDialogsExt = CustomDialogsExt(requireActivity())
 
-        val adapter = ArrayAdapter(requireContext(), R.layout.list_item, collectedItems.getOptionsCollected())
+        val adapter =
+            ArrayAdapter(requireContext(), R.layout.list_item, collectedItems.getOptionsCollected())
 
         (binding.selectCollected.editText as AutoCompleteTextView)?.setAdapter(adapter)
 
-//        viewModel.get
         viewModel.getListItemsCollected("todos")
+
+        viewModel.loadingProgressBar.observe(viewLifecycleOwner) {
+            it?.let {
+                if (it) {
+                    customDialogsExt.startProgressBar()
+                } else {
+                    customDialogsExt.dismissCustomFragment()
+                }
+            }
+        }
 
         binding.selectCollected.editText?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable) {
-                viewModel.viewModelScope.launch { viewModel.getListItemsCollected(binding.selectCollected.editText?.text?.toString()!!
-                    .toLowerCase(Locale.getDefault())) }
+                viewModel.viewModelScope.launch {
+                    viewModel.getListItemsCollected(
+                        binding.selectCollected.editText?.text?.toString()!!
+                            .toLowerCase(Locale.getDefault())
+                    )
+                }
             }
         })
-        viewModel.listItemsCollected.observe(viewLifecycleOwner){
+
+        viewModel.listItemsCollected.observe(viewLifecycleOwner) {
             it?.let {
                 iniciarecyclerView(it.toMutableList())
             }
         }
     }
 
-    private fun iniciarecyclerView(listaItens: MutableList<ItemEntity>?){
+
+    private fun iniciarecyclerView(listaItens: MutableList<ItemEntity>?) {
         adapter = AllDogsAdapter(
-            requireActivity(), listaItens, onItemClickListener = object: AbstractRecyclerAdapter.onClickListener<ItemEntity>{
+            requireActivity(),
+            listaItens,
+            onItemClickListener = object : AbstractRecyclerAdapter.onClickListener<ItemEntity> {
                 override fun onItemCLickListener(view: View?, item: ItemEntity, position: Int) {
                     navigateToScreen(item)
                 }
@@ -86,7 +108,8 @@ class CollectedItemsFragment : Fragment() {
     }
 
     private fun navigateToScreen(item: ItemEntity) {
-        val action = CollectedItemsFragmentDirections.actionCollectedItemsFragmentToDogListFragment(item)
+        val action =
+            CollectedItemsFragmentDirections.actionCollectedItemsFragmentToDogListFragment(item)
         findNavController().navigate(action)
     }
 

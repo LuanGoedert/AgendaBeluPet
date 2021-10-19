@@ -63,4 +63,8 @@
             android:id="@+id/action_loginFragment_to_fragment_agenda"
             app:destination="@id/fragment_agenda" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.agendabelupet.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

@@ -90,6 +90,15 @@
                             <option name="y" value="-920" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_loginFragment_to_fragment_agenda">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -121,6 +130,18 @@
                           <Point>
                             <option name="x" value="177" />
                             <option name="y" value="-303" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="settingsFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-608" />
+                            <option name="y" value="-1316" />
                           </Point>
                         </option>
                       </LayoutPositions>

@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.settings.SettingsFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.agendabelupet.ui.settings.SettingsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        tools:context=".ui.settings.SettingsFragment"
+        android:padding="10dp"
+    >
 
-</FrameLayout>
+        <Button
+            android:id="@+id/button_get_items_from_firestore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_blue"
+            android:elevation="25dp"
+            android:text="@string/text_obter_dados_salvos_na_online"
+            app:layout_constraintBottom_toTopOf="@+id/exclude_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/exclude_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/button_logoff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/red"
+            android:text="@string/text_excluir_conta"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/button_logoff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:elevation="25dp"
+            android:text="@string/text_sair"
+            android:textAlignment="center"
+            android:textColor="@color/light_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

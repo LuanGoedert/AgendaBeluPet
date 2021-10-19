@@ -4,15 +4,16 @@ import android.app.Activity
 import android.app.AlertDialog
 import com.example.agendabelupet.R
 import kotlinx.android.synthetic.main.fragment_custom_dialog.view.*
+import kotlinx.android.synthetic.main.fragment_two_options.view.*
 
 class CustomDialogsExt(val activity: Activity) {
     private var dialog : AlertDialog? = null
 
     fun defaultDialog(
-        title : Int,
+        title: Int,
 //        mensage: Int,
         image: Int,
-        isCancelable: Boolean = true ,
+        isCancelable: Boolean = true,
         onPositive: () -> Unit
     ){
         val inflater = activity.layoutInflater
@@ -43,6 +44,26 @@ class CustomDialogsExt(val activity: Activity) {
         }else {
             dialog!!.dismiss()
         }
+    }
+
+    fun defaultDialogTwoOptions(
+        title : Int,
+        image: Int,
+        isCancelable: Boolean = true ,
+        onPositive: () -> Unit,
+        onNegative: () -> Unit
+    ){
+        val inflater = activity.layoutInflater
+        val dialogView = inflater.inflate(R.layout.fragment_two_options, null)
+        val builder = AlertDialog.Builder(activity)
+        builder.setView(dialogView)
+        dialogView.text_warning_two_options.setText(title)
+        dialogView.image_dialog_two_options.setImageResource(image)
+        dialogView.button_sim.setOnClickListener{ onPositive() }
+        dialogView.button_nao.setOnClickListener{ onNegative() }
+        builder.setCancelable(isCancelable)
+        dialog = builder.create()
+        dialog!!.show()
     }
 
 }

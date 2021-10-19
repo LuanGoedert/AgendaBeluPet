@@ -11,10 +11,11 @@ import com.example.agendabelupet.models.entities.ItemEntity
 import org.w3c.dom.Text
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 
 class DogListAdapter(
-   private val  context: Context,
+    private val context: Context,
     activity: Activity,
     itensList: MutableList<ItemEntity>? = mutableListOf(),
     onItemClickListener: AbstractRecyclerAdapter.onClickListener<ItemEntity>
@@ -43,7 +44,7 @@ class DogListAdapter(
         val petStreet: TextView = itemView.findViewById(R.id.pet_street)
         val petDistrict: TextView = itemView.findViewById(R.id.pet_district)
         val petHouseNumber: TextView = itemView.findViewById(R.id.text_house_number_card)
-        val nextDay : TextView = itemView.findViewById(R.id.proximo_dia)
+        val nextDay: TextView = itemView.findViewById(R.id.proximo_dia)
     }
 
     override fun abstractOnBindViewHolder(
@@ -51,26 +52,49 @@ class DogListAdapter(
         item: ItemEntity?,
         position: Int
     ) {
-        viewHolder.petStreet.text =  "Rua: ${item!!.street}"
+        viewHolder.petStreet.text = "Rua: ${item!!.street}"
         viewHolder.petName.text = item.name
         viewHolder.petRace.text = "Raça :${item.race}"
         viewHolder.petDistrict.text = "Bairro : ${item.district}"
         viewHolder.petHouseNumber.text = "Nº ${item.houseNumber}"
-        if(item.dataQuinzenal != ""){
-            val c = Calendar.getInstance()
-            c.time = sdf.parse(item.dataQuinzenal)
-             c.add(Calendar.DATE, 14)
-            val data = Date(c.timeInMillis)
-            if(data.time.equals(Calendar.getInstance().time) && data.month == Calendar.MONTH){
+        val c = Calendar.getInstance()
+        if (item.dataQuinzenal != "") {
+            val diaTeste = sdf.parse(item.dataQuinzenal)
+            val diff = System.currentTimeMillis() - diaTeste.time
+            val diffDays = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)
+            when {
+                diffDays.toInt() in 0..1 -> {
+                    viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.green))
+                    viewHolder.nextDay.text = "Póximo coleta: hoje}"
+                }
+                diffDays.toInt() < 14 -> {
+                    val data = Date(diaTeste.time)
+                    viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.purple_500))
+                    viewHolder.nextDay.text = "Póximo dia :${sdf.format(data)}"
+                }
+                else -> {
+                    c.add(Calendar.DATE, 14)
+                    val data = Date(c.timeInMillis)
+                    viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.purple_500))
+                    viewHolder.nextDay.text = "Póximo dia :${sdf.format(data)}"
+                }
+            }
+        } else {
+            val weekDay = c.get(Calendar.DAY_OF_WEEK)
+            if ((item.weekDay == "Segunda" && weekDay == Calendar.MONDAY) ||
+                (item.weekDay == "Terça" && weekDay == Calendar.TUESDAY) ||
+                (item.weekDay == "Quarta" && weekDay == Calendar.THURSDAY) ||
+                (item.weekDay == "Quinta" && weekDay == Calendar.WEDNESDAY) ||
+                (item.weekDay == "Sexta" && weekDay == Calendar.FRIDAY) ||
+                (item.weekDay == "Sábado" && weekDay == Calendar.SATURDAY)
+            ) {
                 viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.green))
                 viewHolder.nextDay.text = "Póxima coleta : Hoje"
-                notifyDataSetChanged()
+            } else {
+                viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.purple_500))
+                viewHolder.nextDay.text = "Semanal"
             }
-//
-            viewHolder.nextDay.text = "Póxima coleta :${sdf.format(data)}"
-        }else {
-            viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.green))
-            viewHolder.nextDay.text = "Póxima coleta : Hoje"
+
         }
     }
 

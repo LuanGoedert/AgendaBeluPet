@@ -44,10 +44,9 @@
             android:layout_height="wrap_content"
             android:textColor="@color/purple_500"
             android:textSize="15sp"
+            android:layout_marginEnd="20dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/card_pet_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/pet_district"
             app:layout_constraintTop_toTopOf="@+id/card_raca" />
 
 

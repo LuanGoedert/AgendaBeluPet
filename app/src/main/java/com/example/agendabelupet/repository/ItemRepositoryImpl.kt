@@ -32,8 +32,16 @@ class ItemRepositoryImpl (private val itemDao: ItemDao): ItemRepository {
         return itemDao.updateItemById(id, ownername, name, race, weekDay, plan, value, phone, district, street, houseNumber, collected, dataQuinzenal)
     }
 
+    override suspend fun updateDateBiWeekly(newDate: String, id: Int) {
+        return itemDao.updateDateBiWeekly(newDate, id)
+    }
+
     override suspend fun delete(item: ItemEntity) {
         itemDao.delete(item)
+    }
+
+    override suspend fun deleteAllDb() {
+        itemDao.deleteAllDb()
     }
 
     override suspend fun updateToCollected(id: Int) {
@@ -71,5 +79,9 @@ class ItemRepositoryImpl (private val itemDao: ItemDao): ItemRepository {
 
     override suspend fun updateDataQuinzenal(dataQuinzenal: String, id: Int) {
         return itemDao.updateDataQuinzenal(dataQuinzenal, id)
+    }
+
+    override suspend fun getItemById(id: Int):ItemEntity {
+        return itemDao.getItemById(id)
     }
 }

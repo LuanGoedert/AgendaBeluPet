@@ -38,7 +38,11 @@ public final class ItemDao_Impl implements ItemDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateItemById;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateDateBiWeekly;
+
   private final SharedSQLiteStatement __preparedStmtOfUpdateDataQuinzenal;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteAllDb;
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateToCollected;
 
@@ -197,10 +201,24 @@ public final class ItemDao_Impl implements ItemDao {
         return _query;
       }
     };
+    this.__preparedStmtOfUpdateDateBiWeekly = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE ItemEntity SET dataQuinzenal = ? WHERE Id = ?";
+        return _query;
+      }
+    };
     this.__preparedStmtOfUpdateDataQuinzenal = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
         final String _query = "UPDATE ItemEntity SET dataQuinzenal = ? WHERE Id = ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfDeleteAllDb = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE  FROM ItemEntity";
         return _query;
       }
     };
@@ -373,6 +391,34 @@ public final class ItemDao_Impl implements ItemDao {
   }
 
   @Override
+  public Object updateDateBiWeekly(final String newDate, final int id,
+      final Continuation<? super Unit> p2) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateDateBiWeekly.acquire();
+        int _argIndex = 1;
+        if (newDate == null) {
+          _stmt.bindNull(_argIndex);
+        } else {
+          _stmt.bindString(_argIndex, newDate);
+        }
+        _argIndex = 2;
+        _stmt.bindLong(_argIndex, id);
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfUpdateDateBiWeekly.release(_stmt);
+        }
+      }
+    }, p2);
+  }
+
+  @Override
   public Object updateDataQuinzenal(final String dataQuinzenal, final int id,
       final Continuation<? super Unit> p2) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
@@ -398,6 +444,25 @@ public final class ItemDao_Impl implements ItemDao {
         }
       }
     }, p2);
+  }
+
+  @Override
+  public Object deleteAllDb(final Continuation<? super Unit> p0) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAllDb.acquire();
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfDeleteAllDb.release(_stmt);
+        }
+      }
+    }, p0);
   }
 
   @Override
@@ -458,6 +523,114 @@ public final class ItemDao_Impl implements ItemDao {
         } finally {
           __db.endTransaction();
           __preparedStmtOfDeleteItemById.release(_stmt);
+        }
+      }
+    }, p1);
+  }
+
+  @Override
+  public Object getItemById(final int id, final Continuation<? super ItemEntity> p1) {
+    final String _sql = "SELECT * FROM ItemEntity WHERE id = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindLong(_argIndex, id);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<ItemEntity>() {
+      @Override
+      public ItemEntity call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfOwnerName = CursorUtil.getColumnIndexOrThrow(_cursor, "ownerName");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfRace = CursorUtil.getColumnIndexOrThrow(_cursor, "race");
+          final int _cursorIndexOfWeekDay = CursorUtil.getColumnIndexOrThrow(_cursor, "weekDay");
+          final int _cursorIndexOfPlanType = CursorUtil.getColumnIndexOrThrow(_cursor, "planType");
+          final int _cursorIndexOfValue = CursorUtil.getColumnIndexOrThrow(_cursor, "value");
+          final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+          final int _cursorIndexOfDistrict = CursorUtil.getColumnIndexOrThrow(_cursor, "district");
+          final int _cursorIndexOfStreet = CursorUtil.getColumnIndexOrThrow(_cursor, "street");
+          final int _cursorIndexOfHouseNumber = CursorUtil.getColumnIndexOrThrow(_cursor, "houseNumber");
+          final int _cursorIndexOfCollected = CursorUtil.getColumnIndexOrThrow(_cursor, "collected");
+          final int _cursorIndexOfDataQuinzenal = CursorUtil.getColumnIndexOrThrow(_cursor, "dataQuinzenal");
+          final ItemEntity _result;
+          if(_cursor.moveToFirst()) {
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpOwnerName;
+            if (_cursor.isNull(_cursorIndexOfOwnerName)) {
+              _tmpOwnerName = null;
+            } else {
+              _tmpOwnerName = _cursor.getString(_cursorIndexOfOwnerName);
+            }
+            final String _tmpName;
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
+            final String _tmpRace;
+            if (_cursor.isNull(_cursorIndexOfRace)) {
+              _tmpRace = null;
+            } else {
+              _tmpRace = _cursor.getString(_cursorIndexOfRace);
+            }
+            final String _tmpWeekDay;
+            if (_cursor.isNull(_cursorIndexOfWeekDay)) {
+              _tmpWeekDay = null;
+            } else {
+              _tmpWeekDay = _cursor.getString(_cursorIndexOfWeekDay);
+            }
+            final String _tmpPlanType;
+            if (_cursor.isNull(_cursorIndexOfPlanType)) {
+              _tmpPlanType = null;
+            } else {
+              _tmpPlanType = _cursor.getString(_cursorIndexOfPlanType);
+            }
+            final int _tmpValue;
+            _tmpValue = _cursor.getInt(_cursorIndexOfValue);
+            final String _tmpPhone;
+            if (_cursor.isNull(_cursorIndexOfPhone)) {
+              _tmpPhone = null;
+            } else {
+              _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            }
+            final String _tmpDistrict;
+            if (_cursor.isNull(_cursorIndexOfDistrict)) {
+              _tmpDistrict = null;
+            } else {
+              _tmpDistrict = _cursor.getString(_cursorIndexOfDistrict);
+            }
+            final String _tmpStreet;
+            if (_cursor.isNull(_cursorIndexOfStreet)) {
+              _tmpStreet = null;
+            } else {
+              _tmpStreet = _cursor.getString(_cursorIndexOfStreet);
+            }
+            final String _tmpHouseNumber;
+            if (_cursor.isNull(_cursorIndexOfHouseNumber)) {
+              _tmpHouseNumber = null;
+            } else {
+              _tmpHouseNumber = _cursor.getString(_cursorIndexOfHouseNumber);
+            }
+            final boolean _tmpCollected;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfCollected);
+            _tmpCollected = _tmp != 0;
+            final String _tmpDataQuinzenal;
+            if (_cursor.isNull(_cursorIndexOfDataQuinzenal)) {
+              _tmpDataQuinzenal = null;
+            } else {
+              _tmpDataQuinzenal = _cursor.getString(_cursorIndexOfDataQuinzenal);
+            }
+            _result = new ItemEntity(_tmpId,_tmpOwnerName,_tmpName,_tmpRace,_tmpWeekDay,_tmpPlanType,_tmpValue,_tmpPhone,_tmpDistrict,_tmpStreet,_tmpHouseNumber,_tmpCollected,_tmpDataQuinzenal);
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
         }
       }
     }, p1);

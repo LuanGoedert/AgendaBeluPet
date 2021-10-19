@@ -26,7 +26,6 @@ class NavigationDrawerActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
-//        navView.userImage.setImageURI()
 
         navView.text_welcome?.text = "Bem Vindo${auth.currentUser?.displayName}"
         val navController = findNavController(R.id.nav_host_fragment)
@@ -34,10 +33,9 @@ class NavigationDrawerActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.profit_fragment, R.id.fragment_agenda
+                R.id.profit_fragment, R.id.fragment_agenda, R.id.settingsFragment
             ), drawerLayout
         )
-//        setupActionBarWithNavController(navController, drawerLayout)
         navView.setupWithNavController(navController)
     }
 
