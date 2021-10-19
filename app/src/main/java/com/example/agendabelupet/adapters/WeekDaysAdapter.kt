@@ -38,7 +38,8 @@ class WeekDaysAdapter(
         item: WeekDaysModel?,
         position: Int
     ) {
-        viewHoleder.weekday.text = when (item?.day) {//adaptar pq o enum n pode ter sinais
+        viewHoleder.weekday.text = when (item?.day) {
+            //adaptar pq o enum n pode ter sinais
             WeekDaysEnums.SEGUNDA -> "Segunda"
             WeekDaysEnums.TERCA -> "Terça"
             WeekDaysEnums.QUARTA -> "Quarta"
@@ -48,7 +49,6 @@ class WeekDaysAdapter(
             else -> "Avulso"
         }
         viewHoleder.itemView.setOnClickListener{
-
         }
     }
 

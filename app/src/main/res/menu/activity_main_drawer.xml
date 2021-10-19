@@ -23,5 +23,12 @@
             android:icon="@drawable/ic_baseline_attach_money_24"
             android:iconTint="@color/green"
             />
+
+        <item
+            android:id="@+id/loginFragment"
+            android:title="Sair"
+            android:icon="@drawable/ic_exit"
+            android:iconTint="@color/black"
+            />
     </group>
 </menu>

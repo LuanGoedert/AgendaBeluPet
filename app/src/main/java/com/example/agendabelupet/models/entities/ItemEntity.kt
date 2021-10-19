@@ -13,12 +13,12 @@ data class ItemEntity (
     var name: String = "",
     var race : String = "",
     var weekDay: String = "",
-    var plan : String = "",
+    var planType : String = "",
     var value: Int = 0,
     var phone : String = "",
     var district: String  = "",
     var street : String = "",
-    var houseNumer : String = "",
+    var houseNumber : String = "",
     var collected: Boolean = false,
     var dataQuinzenal : String = ""
     ): Serializable

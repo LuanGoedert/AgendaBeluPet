@@ -23,6 +23,7 @@ class CollectedItemsViewModel(
             if (type == "todos") {
                 itemRepositoryImpl.getAllItems().also {
                     _listItemsCollected.postValue(it)
+                    _listItemsCollected.value?.sortedBy { it.weekDay }
                 }
             } else if (type == "coletados") {
                 itemRepositoryImpl.getItemsCollected().also {
@@ -33,7 +34,7 @@ class CollectedItemsViewModel(
                     _listItemsCollected.postValue(it)
                 }
             }
-
+            _listItemsCollected.value?.sortedBy { it.weekDay }
         }
 
     }

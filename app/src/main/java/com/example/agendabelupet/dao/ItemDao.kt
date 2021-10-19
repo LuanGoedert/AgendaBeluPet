@@ -13,6 +13,12 @@ interface ItemDao {
     @Update
     suspend fun update(item: ItemEntity)
 
+    @Query("UPDATE ItemEntity  SET ownerName = :ownername, name = :name, race = :race,weekDay = :weekDay,planType = :planType, value = :value, phone = :phone, district = :district, street = :street, houseNumber = :houseNumber, collected = :collected, dataQuinzenal = :dataQuinzenal  WHERE id = :id")
+    suspend fun updateItemById(id : Int, ownername: String, name: String, race: String, weekDay: String,planType: String, value: String, phone: String, district: String, street: String, houseNumber: String, collected: Boolean, dataQuinzenal: String)
+
+    @Query("UPDATE ItemEntity SET dataQuinzenal = :dataQuinzenal WHERE Id = :id")
+    suspend fun updateDataQuinzenal(dataQuinzenal: String, id: Int)
+
     @Delete
     suspend fun delete(item: ItemEntity)
 
@@ -35,6 +41,9 @@ interface ItemDao {
     @Query("SELECT * FROM ItemEntity WHERE  collected = 1")
     suspend fun getItemsCollected(): List<ItemEntity>
 
+    @Query("SELECT value FROM ItemEntity")
+    suspend fun getValues(): List<Int>
+
     @Query("DELETE FROM ItemEntity WHERE id =:id")
-    suspend fun deleteItemById(id: String)
+    suspend fun deleteItemById(id: Int)
 }

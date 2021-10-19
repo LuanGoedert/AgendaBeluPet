@@ -52,6 +52,7 @@
     <string name="text_wait">Aguarde...</string>
     <string name="text_mark_as_collected">Marcar como coletado</string>
     <string name="text_item_collected">O item foi marcado com coletado</string>
+    <string name="text_item_not_collected">O item foi marcado como não coletado</string>
 
 
     <string-array name="dias_da_semana">
@@ -96,5 +97,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="texttabela_de_lucros">Tabela de lucros</string>
+    <string name="text_error">Erro ao fazer login</string>
+    <string name="text_fill_all_fields">Preencha todos os campos necessários</string>
+    <string name="text_atencao">Atenção!\n selecione o dia da semana a opção quinzenal</string>
+    <string name="text_item_avulso">O Item foi marcado como coletado e será excluído logo após por ser Avulso</string>
 
 </resources>

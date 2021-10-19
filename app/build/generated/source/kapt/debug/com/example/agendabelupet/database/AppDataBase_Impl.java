@@ -39,10 +39,10 @@ public final class AppDataBase_Impl extends AppDataBase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `ItemEntity` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ownerName` TEXT NOT NULL, `name` TEXT NOT NULL, `race` TEXT NOT NULL, `weekDay` TEXT NOT NULL, `plan` TEXT NOT NULL, `value` INTEGER NOT NULL, `phone` TEXT NOT NULL, `district` TEXT NOT NULL, `street` TEXT NOT NULL, `houseNumer` TEXT NOT NULL, `collected` INTEGER NOT NULL, `dataQuinzenal` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ItemEntity` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ownerName` TEXT NOT NULL, `name` TEXT NOT NULL, `race` TEXT NOT NULL, `weekDay` TEXT NOT NULL, `planType` TEXT NOT NULL, `value` INTEGER NOT NULL, `phone` TEXT NOT NULL, `district` TEXT NOT NULL, `street` TEXT NOT NULL, `houseNumber` TEXT NOT NULL, `collected` INTEGER NOT NULL, `dataQuinzenal` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `UserEntity` (`userId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `userName` TEXT NOT NULL, `userEmail` TEXT NOT NULL, `userPhotoUri` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7a30766e78e16e7372f06baa4ed82f92')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7a1a2b4424572a715a56bf1b790eee32')");
       }
 
       @Override
@@ -93,12 +93,12 @@ public final class AppDataBase_Impl extends AppDataBase {
         _columnsItemEntity.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("race", new TableInfo.Column("race", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("weekDay", new TableInfo.Column("weekDay", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsItemEntity.put("plan", new TableInfo.Column("plan", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsItemEntity.put("planType", new TableInfo.Column("planType", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("value", new TableInfo.Column("value", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("phone", new TableInfo.Column("phone", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("district", new TableInfo.Column("district", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("street", new TableInfo.Column("street", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsItemEntity.put("houseNumer", new TableInfo.Column("houseNumer", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsItemEntity.put("houseNumber", new TableInfo.Column("houseNumber", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("collected", new TableInfo.Column("collected", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsItemEntity.put("dataQuinzenal", new TableInfo.Column("dataQuinzenal", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysItemEntity = new HashSet<TableInfo.ForeignKey>(0);
@@ -126,7 +126,7 @@ public final class AppDataBase_Impl extends AppDataBase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7a30766e78e16e7372f06baa4ed82f92", "9a59d00b20927888459ea9c9cc4e924d");
+    }, "7a1a2b4424572a715a56bf1b790eee32", "ee14e473c9e205d542f4e95930cb3fef");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

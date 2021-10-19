@@ -81,7 +81,8 @@ val appModule = module {
 
     viewModel {
         ProfitViewModel(
-            application = androidApplication()
+            application = androidApplication(),
+            itemRepositoryImpl = get()
         )
     }
 }

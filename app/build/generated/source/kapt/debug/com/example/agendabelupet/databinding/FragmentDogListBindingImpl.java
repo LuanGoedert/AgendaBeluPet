@@ -25,8 +25,8 @@ public class FragmentDogListBindingImpl extends FragmentDogListBinding  {
         sViewsWithIds.put(R.id.text_pet_district, 9);
         sViewsWithIds.put(R.id.text_pet_street, 10);
         sViewsWithIds.put(R.id.text_pet_house_number, 11);
-        sViewsWithIds.put(R.id.button_edit_plan, 12);
-        sViewsWithIds.put(R.id.button_collect, 13);
+        sViewsWithIds.put(R.id.button_collect, 12);
+        sViewsWithIds.put(R.id.button_edit_plan, 13);
     }
     // views
     @NonNull
@@ -41,8 +41,8 @@ public class FragmentDogListBindingImpl extends FragmentDogListBinding  {
     }
     private FragmentDogListBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (com.google.android.material.checkbox.MaterialCheckBox) bindings[12]
             , (android.widget.Button) bindings[13]
-            , (android.widget.Button) bindings[12]
             , (androidx.cardview.widget.CardView) bindings[1]
             , (android.widget.TextView) bindings[9]
             , (android.widget.TextView) bindings[11]

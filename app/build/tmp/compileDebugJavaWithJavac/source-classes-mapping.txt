@@ -54,7 +54,12 @@ com/example/agendabelupet/dao/ItemDao_Impl.java
  com.example.agendabelupet.dao.ItemDao_Impl$14
  com.example.agendabelupet.dao.ItemDao_Impl$15
  com.example.agendabelupet.dao.ItemDao_Impl$16
+ com.example.agendabelupet.dao.ItemDao_Impl$17
+ com.example.agendabelupet.dao.ItemDao_Impl$18
+ com.example.agendabelupet.dao.ItemDao_Impl$19
  com.example.agendabelupet.dao.ItemDao_Impl$2
+ com.example.agendabelupet.dao.ItemDao_Impl$20
+ com.example.agendabelupet.dao.ItemDao_Impl$21
  com.example.agendabelupet.dao.ItemDao_Impl$3
  com.example.agendabelupet.dao.ItemDao_Impl$4
  com.example.agendabelupet.dao.ItemDao_Impl$5

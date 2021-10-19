@@ -14,12 +14,13 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.agendabelupet.R;
 import com.example.agendabelupet.ui.dogList.DogListViewModel;
+import com.google.android.material.checkbox.MaterialCheckBox;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentDogListBinding extends ViewDataBinding {
   @NonNull
-  public final Button buttonCollect;
+  public final MaterialCheckBox buttonCollect;
 
   @NonNull
   public final Button buttonEditPlan;
@@ -61,10 +62,10 @@ public abstract class FragmentDogListBinding extends ViewDataBinding {
   protected DogListViewModel mViewModel;
 
   protected FragmentDogListBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button buttonCollect, Button buttonEditPlan, CardView cardView, TextView textPetDistrict,
-      TextView textPetHouseNumber, TextView textPetName, TextView textPetOwner,
-      TextView textPetRace, TextView textPetStreet, TextView textPetWeekDay, TextView textPhone,
-      TextView textPlan, TextView textPlanValue) {
+      MaterialCheckBox buttonCollect, Button buttonEditPlan, CardView cardView,
+      TextView textPetDistrict, TextView textPetHouseNumber, TextView textPetName,
+      TextView textPetOwner, TextView textPetRace, TextView textPetStreet, TextView textPetWeekDay,
+      TextView textPhone, TextView textPlan, TextView textPlanValue) {
     super(_bindingComponent, _root, _localFieldCount);
     this.buttonCollect = buttonCollect;
     this.buttonEditPlan = buttonEditPlan;

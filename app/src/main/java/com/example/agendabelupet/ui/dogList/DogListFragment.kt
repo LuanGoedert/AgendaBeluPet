@@ -13,7 +13,6 @@ import com.example.agendabelupet.R
 import com.example.agendabelupet.databinding.FragmentDogListBinding
 import com.example.agendabelupet.models.entities.ItemEntity
 import com.example.agendabelupet.utils.CustomDialogsExt
-import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -45,30 +44,58 @@ class DogListFragment : Fragment() {
         binding.textPetName.text = getString(R.string.text_pet_name, args.itemEntity.name)
         binding.textPetRace.text = getString(R.string.text_race, args.itemEntity.race)
         binding.textPetWeekDay.text =  getString(R.string.text_day, args.itemEntity.weekDay)
-        binding.textPlan.text = getString(R.string.text_plan, args.itemEntity.plan)
+        binding.textPlan.text = getString(R.string.text_plan, args.itemEntity.planType)
         binding.textPhone.text = getString(R.string.text_phone_number, PhoneNumberUtils.formatNumber(args.itemEntity.phone, "BR"))
         binding.textPlanValue.text = getString(R.string.text_plan_value, args.itemEntity.value.toString())
         binding.textPetDistrict.text = getString(R.string.text_district, args.itemEntity.district)
         binding.textPetStreet.text = getString(R.string.text_sreet, args.itemEntity.street)
-        binding.textPetHouseNumber.text = getString(R.string.text_n, args.itemEntity.houseNumer)
+        binding.textPetHouseNumber.text = getString(R.string.text_n, args.itemEntity.houseNumber)
+
+        binding.buttonCollect.isChecked = args.itemEntity.collected
 
 
         binding.buttonEditPlan.setOnClickListener{
             navigateToEditFragment(args.itemEntity)
         }
 
-        binding.buttonCollect.setOnClickListener{
-            viewModel.viewModelScope.launch { viewModel.markItemAsCollected(args.itemEntity.id) }.invokeOnCompletion {
-                customDialogsExt.defaultDialog(
-                    title = R.string.text_item_collected,
-                    image = R.drawable.icone_sucesso,
-                    onPositive = {
-                        customDialogsExt.dismissCustomFragment()
-                        navigateToAgendaFragment()
+        binding.buttonCollect.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked){
+                viewModel.viewModelScope.launch { viewModel.markItemAsCollected(args.itemEntity.id) }.invokeOnCompletion {
+                    val title = if(args.itemEntity.planType == "Avulso"){
+                        R.string.text_item_avulso
+                    }else {
+                        R.string.text_item_collected
                     }
-                )
+                    customDialogsExt.defaultDialog(
+                        title = title,
+                        image = R.drawable.icone_sucesso,
+                        onPositive = {
+                            if(args.itemEntity.planType == "Avulso"){
+                                viewModel.viewModelScope.launch { viewModel.deleteLoosePlan(args.itemEntity.id) }.invokeOnCompletion {
+                                    customDialogsExt.dismissCustomFragment()
+                                    navigateToAgendaFragment()
+                                    return@invokeOnCompletion
+                                }
+                            }
+                            customDialogsExt.dismissCustomFragment()
+                            navigateToAgendaFragment()
+                        }
+                    )
+                }
+            }else {
+                viewModel.viewModelScope.launch { viewModel.markItemAsNotCollected(args.itemEntity.id) }.invokeOnCompletion {
+                    customDialogsExt.defaultDialog(
+                        title = R.string.text_item_not_collected,
+                        image = R.drawable.icone_sucesso,
+                        onPositive = {
+                            customDialogsExt.dismissCustomFragment()
+                            navigateToAgendaFragment()
+                        }
+                    )
+                }
             }
         }
+
     }
 
     private fun navigateToEditFragment(itemEntity: ItemEntity?){

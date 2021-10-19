@@ -24,9 +24,6 @@ public abstract class FragmentAgendaBinding extends ViewDataBinding {
   public final Button button;
 
   @NonNull
-  public final Button buttonSeeProfit;
-
-  @NonNull
   public final ConstraintLayout consTop;
 
   @NonNull
@@ -45,12 +42,10 @@ public abstract class FragmentAgendaBinding extends ViewDataBinding {
   protected AgendaViewModel mViewModel;
 
   protected FragmentAgendaBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button button, Button buttonSeeProfit, ConstraintLayout consTop,
-      ConstraintLayout constraintLayout, RecyclerView recyclerWeek, TextInputLayout selectWeekDay,
-      AutoCompleteTextView teste) {
+      Button button, ConstraintLayout consTop, ConstraintLayout constraintLayout,
+      RecyclerView recyclerWeek, TextInputLayout selectWeekDay, AutoCompleteTextView teste) {
     super(_bindingComponent, _root, _localFieldCount);
     this.button = button;
-    this.buttonSeeProfit = buttonSeeProfit;
     this.consTop = consTop;
     this.constraintLayout = constraintLayout;
     this.recyclerWeek = recyclerWeek;

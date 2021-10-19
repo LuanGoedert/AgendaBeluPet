@@ -4,6 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +35,7 @@ import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlinx.android.synthetic.main.nav_header_main.*
 import java.io.File
+import java.util.*
 
 
 class AgendaFragment : Fragment() {
@@ -70,13 +72,12 @@ class AgendaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navController = NavController(requireContext())
 
-
-
-        activity?.findViewById<TextView>(R.id.text_toolbar_main)?.text =
-            getString(R.string.text_agenda)
-
         val items = WeekDaysString()
+
         val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items.loadWeekDays())
+        (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(adapter)
+
+        activity?.findViewById<TextView>(R.id.text_toolbar_main)?.text = getString(R.string.text_agenda)
 
         viewModel.weekDay.observe(viewLifecycleOwner) {
             it?.let {
@@ -84,17 +85,11 @@ class AgendaFragment : Fragment() {
             }
         }
 
-        (binding.selectWeekDay.editText as? AutoCompleteTextView)?.setAdapter(adapter)
-
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             return@addCallback
         }
 
         customDialogsExt = CustomDialogsExt(requireActivity())
-
-
-
-
 
         viewModel.itensFromDb.observe(viewLifecycleOwner) {
             it?.let {
@@ -129,7 +124,7 @@ class AgendaFragment : Fragment() {
 
 
     private fun iniciaRecyclerView(listaItens: MutableList<ItemEntity>?) {
-        abstractRecyclerAdapter = DogListAdapter(
+        abstractRecyclerAdapter = DogListAdapter(requireContext(),
             requireActivity(), listaItens,
             onItemClickListener = object : AbstractRecyclerAdapter.onClickListener<ItemEntity> {
                 override fun onItemCLickListener(view: View?, item: ItemEntity, position: Int) {
@@ -153,8 +148,6 @@ class AgendaFragment : Fragment() {
         val action = AgendaFragmentDirections.actionGlobalNewPlanFragment(item)
         findNavController().navigate(action)
     }
-
-    private fun doNothing(view: View) {}
 
     override fun onDestroyView() {
         viewModel.stopLoading()
