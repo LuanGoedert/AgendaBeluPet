@@ -2195,7 +2195,6 @@ id cardView2
 id card_itemInformation
 id card_pet_name
 id card_pet_name_collected
-id card_raca
 id card_week_day
 id carryVelocity
 id center
@@ -2874,6 +2873,7 @@ layout text_view_without_line_height
 menu activity_main_drawer
 menu navigation_drawer
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation mobile_navigation
 plurals mtrl_badge_content_description

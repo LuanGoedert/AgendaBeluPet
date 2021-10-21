@@ -8,7 +8,7 @@
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
     android:elevation="50dp"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="0dp"
     app:cardElevation="25dp"
 
 
@@ -24,15 +24,15 @@
             android:id="@+id/card_pet_name_collected"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:layout_marginBottom="10dp"
             android:text="@string/text_pet"
-            android:textColor="@color/light_blue"
+            android:textColor="@color/black"
             android:textSize="30sp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
@@ -52,10 +52,10 @@
             android:id="@+id/text_collected"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:text="Coletado"
             android:textColor="@color/green"
             android:textSize="10sp"
-            android:layout_margin="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

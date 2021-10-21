@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,13 +14,14 @@ import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.agendabelupet.R;
 import com.example.agendabelupet.ui.agenda.AgendaViewModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentAgendaBinding extends ViewDataBinding {
   @NonNull
-  public final Button button;
+  public final FloatingActionButton button;
 
   @NonNull
   public final ConstraintLayout consTop;
@@ -39,7 +39,7 @@ public abstract class FragmentAgendaBinding extends ViewDataBinding {
   protected AgendaViewModel mViewModel;
 
   protected FragmentAgendaBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button button, ConstraintLayout consTop, RecyclerView recyclerWeek,
+      FloatingActionButton button, ConstraintLayout consTop, RecyclerView recyclerWeek,
       TextInputLayout selectWeekDay, AutoCompleteTextView teste) {
     super(_bindingComponent, _root, _localFieldCount);
     this.button = button;

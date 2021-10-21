@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_main.xml.flat",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\app_bar_main.xml"
-    },
-    {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icone_settings.xml.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\drawable\\icone_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_main.xml.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     },
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_white.xml.flat",
@@ -24,12 +24,12 @@
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
@@ -44,12 +44,12 @@
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\drawable-v24\\dog.png"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dog_list.xml.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_dog_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_side_nav_bar.xml.flat",
@@ -66,6 +66,10 @@
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profit.xml.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_profit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_item_information.xml.flat",
@@ -140,6 +144,10 @@
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\drawable\\dog_image.xml"
     },
     {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_navigation_drawer_activity.xml.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\activity_navigation_drawer_activity.xml"
     },
@@ -188,6 +196,10 @@
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\drawable\\ic_pet.xml"
     },
     {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
@@ -234,6 +246,14 @@
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",

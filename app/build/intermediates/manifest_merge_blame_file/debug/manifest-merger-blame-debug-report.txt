@@ -55,8 +55,8 @@
 32-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:19:9-29:20
 33            android:name="com.example.agendabelupet.NavigationDrawerActivity"
 33-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:20:13-53
-34            android:label="@string/title_activity_navigation_drawer_activity"
-34-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:21:13-78
+34            android:label="@string/app_name"
+34-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:21:13-45
 35            android:screenOrientation="portrait"
 35-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:23:13-49
 36            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >

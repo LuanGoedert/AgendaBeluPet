@@ -17,8 +17,8 @@ public class FragmentAgendaBindingImpl extends FragmentAgendaBinding  {
         sViewsWithIds.put(R.id.cons_top, 1);
         sViewsWithIds.put(R.id.select_week_day, 2);
         sViewsWithIds.put(R.id.teste, 3);
-        sViewsWithIds.put(R.id.button, 4);
-        sViewsWithIds.put(R.id.recycler_week, 5);
+        sViewsWithIds.put(R.id.recycler_week, 4);
+        sViewsWithIds.put(R.id.button, 5);
     }
     // views
     @NonNull
@@ -33,9 +33,9 @@ public class FragmentAgendaBindingImpl extends FragmentAgendaBinding  {
     }
     private FragmentAgendaBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[4]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
             , (com.google.android.material.textfield.TextInputLayout) bindings[2]
             , (android.widget.AutoCompleteTextView) bindings[3]
             );

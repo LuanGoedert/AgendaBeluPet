@@ -30,6 +30,7 @@ import java.util.*
 class NewPlanFragment : Fragment() {
     private lateinit var binding: FragmentNewPlanBinding
     private lateinit var customDialog: CustomDialogsExt
+
     private val viewModel: NewPlanViewModel by viewModel()
     private val itemByArgs: NewPlanFragmentArgs? by navArgs()
 

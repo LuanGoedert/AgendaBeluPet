@@ -41,7 +41,6 @@ class DogListAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val petName: TextView = itemView.findViewById(R.id.card_pet_name)
-        val petRace: TextView = itemView.findViewById(R.id.card_raca)
         val petStreet: TextView = itemView.findViewById(R.id.pet_street)
         val petDistrict: TextView = itemView.findViewById(R.id.pet_district)
         val petHouseNumber: TextView = itemView.findViewById(R.id.text_house_number_card)
@@ -55,7 +54,6 @@ class DogListAdapter(
     ) {
         viewHolder.petStreet.text = "Rua: ${item!!.street}"
         viewHolder.petName.text = item.name
-        viewHolder.petRace.text = "Raça :${item.race}"
         viewHolder.petDistrict.text = "Bairro : ${item.district}"
         viewHolder.petHouseNumber.text = "Nº ${item.houseNumber}"
         val c = Calendar.getInstance()

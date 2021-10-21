@@ -42,7 +42,7 @@ class ProfitFragment : Fragment() {
         val pieChart = binding.barTeste
         pieChart.isClickable = false
         val description = Description()
-        description.text = "Valores mensais"
+        description.text = "Valores mensais(R$)"
         description.textSize = 20f
         description.textColor = R.color.light_blue
         pieChart.description = description

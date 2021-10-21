@@ -219,7 +219,7 @@ ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:
 	android:screenOrientation
 		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:23:13-49
 	android:label
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:21:13-78
+		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:21:13-45
 	android:theme
 		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:22:14-79
 	android:name
