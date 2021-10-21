@@ -14,7 +14,7 @@ public class FragmentProfitBindingImpl extends FragmentProfitBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.text_notifications, 1);
+        sViewsWithIds.put(R.id.bar_teste, 1);
     }
     // views
     @NonNull
@@ -29,7 +29,7 @@ public class FragmentProfitBindingImpl extends FragmentProfitBinding  {
     }
     private FragmentProfitBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.TextView) bindings[1]
+            , (com.github.mikephil.charting.charts.PieChart) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

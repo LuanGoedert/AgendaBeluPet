@@ -4,7 +4,6 @@ package com.example.agendabelupet.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -12,20 +11,21 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.agendabelupet.R;
 import com.example.agendabelupet.ui.profit.ProfitViewModel;
+import com.github.mikephil.charting.charts.PieChart;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentProfitBinding extends ViewDataBinding {
   @NonNull
-  public final TextView textNotifications;
+  public final PieChart barTeste;
 
   @Bindable
   protected ProfitViewModel mViewModel;
 
   protected FragmentProfitBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView textNotifications) {
+      PieChart barTeste) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.textNotifications = textNotifications;
+    this.barTeste = barTeste;
   }
 
   public abstract void setViewModel(@Nullable ProfitViewModel viewModel);

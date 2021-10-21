@@ -1366,6 +1366,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color teal_200
 color teal_700
+color test_color
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
@@ -2157,6 +2158,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id bar_teste
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2182,6 +2184,8 @@ id button_logoff
 id button_nao
 id button_ok
 id button_save_item
+id button_set_items_collected
+id button_set_items_not_collected
 id button_sim
 id cache_measures
 id cancel_action
@@ -2218,7 +2222,6 @@ id collectedItemsFragment
 id confirm_button
 id cons_top
 id constraint
-id constraintLayout
 id constraint_item
 id container
 id content
@@ -2600,7 +2603,6 @@ id text_house_number_card
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_notifications
 id text_pet_district
 id text_pet_house_number
 id text_pet_name
@@ -2951,6 +2953,7 @@ string invalid_password
 string invalid_username
 string item_view_role_description
 string login_failed
+string marcar_todos_itens_como_coletados
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -3094,6 +3097,7 @@ string text_item_not_collected
 string text_itens_coletados
 string text_logoff
 string text_mark_as_collected
+string text_mark_as_not_collceted
 string text_n
 string text_n_o
 string text_nome

@@ -114,4 +114,6 @@
     <string name="text_delete_account">Excluir conta?</string>
     <string name="text_succes_delete_account">Conta deletada com sucesso!</string>
     <string name="text_error_on_delete_account">Erro ao tentar deletar a conta</string>
+    <string name="text_mark_as_not_collceted">Marcar todos itens como Não coletados</string>
+    <string name="marcar_todos_itens_como_coletados">Marcar todos itens como coletados</string>
 </resources>

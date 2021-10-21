@@ -26,7 +26,7 @@ class DogListViewModel(
         return itemRepositoryImpl.getItemById(id)
     }
 
-    suspend fun updateToCollected(itemEntity: ItemEntity, ownerName: String, phone: String) {
+    suspend fun updateItem(itemEntity: ItemEntity, ownerName: String, phone: String) {
         updateDocument(userRepositoryImpl.getUser().userEmail, ownerName, phone, itemEntity)
     }
 
@@ -34,28 +34,33 @@ class DogListViewModel(
         itemRepositoryImpl.deleteItemById(id)
     }
 
-    suspend fun updateBiWeeklyPlan(newDate: String, id: Int) {
-        itemRepositoryImpl.updateDateBiWeekly(newDate, id)
-    }
 
-    suspend fun markItemAsCollected(itemEntity: ItemEntity, dataQuinzenal: String) = viewModelScope.launch {
-        if (dataQuinzenal.isNotEmpty()) {
-            itemRepositoryImpl.deleteItemById(itemEntity.id)
-            val date = sdf.parse(dataQuinzenal)
-            val c = Calendar.getInstance()
-            c.time = date
-            c.add(Calendar.DATE, 14)
-            val newDate = sdf.format(c.time)
-            itemEntity.dataQuinzenal = newDate
-            itemEntity.collected = true
-            itemRepositoryImpl.insert(itemEntity)
-        } else {
-            itemRepositoryImpl.updateToCollected(itemEntity.id)
+    suspend fun markItemAsCollected(itemEntity: ItemEntity, dataQuinzenal: String) =
+        viewModelScope.launch {
+            if (dataQuinzenal.isNotEmpty()) {
+                val date = sdf.parse(dataQuinzenal)
+                val c = Calendar.getInstance()
+                c.time = date
+                c.add(Calendar.DATE, 14)
+                val newDate = sdf.format(c.time)
+                viewModelScope.launch {
+                    itemRepositoryImpl.updateDataQuinzenal(newDate,  itemEntity.id)
+                    itemRepositoryImpl.updateToCollected(itemEntity.id)
+                    val itemToUpdate = itemEntity
+                    itemToUpdate.collected = true
+                    updateItem( itemToUpdate, itemEntity.ownerName, itemEntity.phone)
+                }
+            } else {
+                itemRepositoryImpl.updateToCollected(itemEntity.id)
+                updateItem( itemEntity, itemEntity.ownerName, itemEntity.phone)
+            }
+
         }
 
-    }
-
-    suspend fun markItemAsNotCollected(itemID: Int) = viewModelScope.launch {
-        itemRepositoryImpl.updateToNotCollected(itemID)
+    suspend fun markItemAsNotCollected(itemEntity : ItemEntity) = viewModelScope.launch {
+        itemRepositoryImpl.updateToNotCollected(itemEntity.id)
+        val itemToUpdate = itemEntity
+        itemToUpdate.collected = false
+        updateItem( itemEntity, itemEntity.ownerName, itemEntity.phone)
     }
 }

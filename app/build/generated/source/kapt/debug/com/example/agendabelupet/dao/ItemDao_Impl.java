@@ -38,8 +38,6 @@ public final class ItemDao_Impl implements ItemDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateItemById;
 
-  private final SharedSQLiteStatement __preparedStmtOfUpdateDateBiWeekly;
-
   private final SharedSQLiteStatement __preparedStmtOfUpdateDataQuinzenal;
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteAllDb;
@@ -198,13 +196,6 @@ public final class ItemDao_Impl implements ItemDao {
       @Override
       public String createQuery() {
         final String _query = "UPDATE ItemEntity  SET ownerName = ?, name = ?, race = ?,weekDay = ?,planType = ?, value = ?, phone = ?, district = ?, street = ?, houseNumber = ?, collected = ?, dataQuinzenal = ?  WHERE id = ?";
-        return _query;
-      }
-    };
-    this.__preparedStmtOfUpdateDateBiWeekly = new SharedSQLiteStatement(__db) {
-      @Override
-      public String createQuery() {
-        final String _query = "UPDATE ItemEntity SET dataQuinzenal = ? WHERE Id = ?";
         return _query;
       }
     };
@@ -388,34 +379,6 @@ public final class ItemDao_Impl implements ItemDao {
         }
       }
     }, p13);
-  }
-
-  @Override
-  public Object updateDateBiWeekly(final String newDate, final int id,
-      final Continuation<? super Unit> p2) {
-    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
-      @Override
-      public Unit call() throws Exception {
-        final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateDateBiWeekly.acquire();
-        int _argIndex = 1;
-        if (newDate == null) {
-          _stmt.bindNull(_argIndex);
-        } else {
-          _stmt.bindString(_argIndex, newDate);
-        }
-        _argIndex = 2;
-        _stmt.bindLong(_argIndex, id);
-        __db.beginTransaction();
-        try {
-          _stmt.executeUpdateDelete();
-          __db.setTransactionSuccessful();
-          return Unit.INSTANCE;
-        } finally {
-          __db.endTransaction();
-          __preparedStmtOfUpdateDateBiWeekly.release(_stmt);
-        }
-      }
-    }, p2);
   }
 
   @Override
@@ -1070,6 +1033,64 @@ public final class ItemDao_Impl implements ItemDao {
   @Override
   public Object getValues(final Continuation<? super List<Integer>> p0) {
     final String _sql = "SELECT value FROM ItemEntity";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<Integer>>() {
+      @Override
+      public List<Integer> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final List<Integer> _result = new ArrayList<Integer>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final Integer _item;
+            if (_cursor.isNull(0)) {
+              _item = null;
+            } else {
+              _item = _cursor.getInt(0);
+            }
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, p0);
+  }
+
+  @Override
+  public Object getValuesSemanal(final Continuation<? super List<Integer>> p0) {
+    final String _sql = "SELECT value FROM ItemEntity WHERE planType = 'Semanal' ";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<Integer>>() {
+      @Override
+      public List<Integer> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final List<Integer> _result = new ArrayList<Integer>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final Integer _item;
+            if (_cursor.isNull(0)) {
+              _item = null;
+            } else {
+              _item = _cursor.getInt(0);
+            }
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, p0);
+  }
+
+  @Override
+  public Object getValuesQuinzenal(final Continuation<? super List<Integer>> p0) {
+    final String _sql = "SELECT value FROM ItemEntity WHERE planType = 'Quinzenal' ";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
     return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<Integer>>() {

@@ -52,8 +52,7 @@ class DogListFragment : Fragment() {
             R.string.text_phone_number,
             PhoneNumberUtils.formatNumber(args.itemEntity.phone, "BR")
         )
-        binding.textPlanValue.text =
-            getString(R.string.text_plan_value, args.itemEntity.value.toString())
+        binding.textPlanValue.text = getString(R.string.text_plan_value, args.itemEntity.value.toString())
         binding.textPetDistrict.text = getString(R.string.text_district, args.itemEntity.district)
         binding.textPetStreet.text = getString(R.string.text_sreet, args.itemEntity.street)
         binding.textPetHouseNumber.text = getString(R.string.text_n, args.itemEntity.houseNumber)
@@ -66,7 +65,7 @@ class DogListFragment : Fragment() {
         }
 
         binding.buttonCollect.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {
+            if (!args.itemEntity.collected) {
                 viewModel.viewModelScope.launch {
 
                     viewModel.markItemAsCollected(args.itemEntity, args.itemEntity.dataQuinzenal) }
@@ -78,7 +77,8 @@ class DogListFragment : Fragment() {
                         }
                         customDialogsExt.defaultDialog(
                             title = title,
-                            image = R.drawable.icone_sucesso
+                            image = R.drawable.icone_sucesso,
+                            isCancelable = false
                         ) {
                             if (args.itemEntity.planType == "Avulso") {
                                 viewModel.viewModelScope.launch { viewModel.deleteLoosePlan(args.itemEntity.id) }
@@ -88,24 +88,11 @@ class DogListFragment : Fragment() {
                                         return@invokeOnCompletion
                                     }
                             }
-                            if (args.itemEntity.planType == "Quinzenal") {
-                                val c = Calendar.getInstance()
-                                c.add(Calendar.DATE, 14)
-                                val date = Date(c.timeInMillis)
-                                viewModel.viewModelScope.launch {
-                                    viewModel.updateBiWeeklyPlan(
-                                        sdf.format(
-                                            date
-                                        ), args.itemEntity.id
-                                    )
-                                }
-                            }
                             viewModel.viewModelScope.launch {
-                                val itemToUpdate = viewModel.getItemFromRepoById(args.itemEntity.id)
-                                viewModel.updateToCollected(
-                                    itemToUpdate,
-                                    itemToUpdate.ownerName,
-                                    itemToUpdate.phone
+                                viewModel.updateItem(
+                                    args.itemEntity,
+                                    args.itemEntity.ownerName,
+                                    args.itemEntity.phone
                                 )
 
                             }
@@ -114,29 +101,27 @@ class DogListFragment : Fragment() {
                         }
                     }
             } else {
-                viewModel.viewModelScope.launch { viewModel.markItemAsNotCollected(args.itemEntity.id) }
+                viewModel.viewModelScope.launch { viewModel.markItemAsNotCollected(args.itemEntity) }
                     .invokeOnCompletion {
                         customDialogsExt.defaultDialog(
                             title = R.string.text_item_not_collected,
-                            image = R.drawable.icone_sucesso
+                            image = R.drawable.icone_sucesso,
+                            isCancelable = false
                         ) {
                             viewModel.viewModelScope.launch {
                                 val itemToUpdate = viewModel.getItemFromRepoById(args.itemEntity.id)
-                                viewModel.updateToCollected(
+                                viewModel.updateItem(
                                     itemToUpdate,
                                     itemToUpdate.ownerName,
                                     itemToUpdate.phone
                                 )
-
                             }
                             customDialogsExt.dismissCustomFragment()
                             navigateToAgendaFragment()
                         }
                     }
             }
-
         }
-
     }
 
     private fun navigateToEditFragment(itemEntity: ItemEntity?) {

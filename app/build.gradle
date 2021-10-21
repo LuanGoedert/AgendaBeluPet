@@ -41,6 +41,7 @@ android {
     }
     repositories {
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -132,7 +133,8 @@ dependencies {
     //setting URI
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
-    implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
+    implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
     implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
 }

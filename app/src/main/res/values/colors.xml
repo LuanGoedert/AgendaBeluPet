@@ -15,4 +15,5 @@
     <color name="lighter_purple">#B39DDB</color>
     <color name="darker_blue">#3949AB</color>
     <color name="middle_color">#C8E6C9</color>
+    <color name="test_color">#FFD54F</color>
 </resources>

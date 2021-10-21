@@ -14,22 +14,98 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="10dp"
        >
 
-        <TextView
-            android:id="@+id/text_notifications"
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/bar_teste"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:text="sss"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/cs_1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/bar_teste"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+
+<!--            <ImageView-->
+
+<!--                android:id="@+id/image_mensal"-->
+<!--                android:layout_width="10dp"-->
+<!--                android:layout_height="10dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:background="@color/light_blue"-->
+<!--                android:backgroundTint="@color/light_blue"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/text_mensal"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/text_mensal" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/text_mensal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:layout_margin="5dp"-->
+
+<!--                android:text="mensal"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/image_mensal"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--            <ImageView-->
+
+<!--                android:id="@+id/image_semanal"-->
+<!--                android:layout_width="10dp"-->
+<!--                android:layout_height="10dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:background="@color/test_color"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/text_semanal"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/text_semanal" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/text_semanal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:layout_margin="5dp"-->
+
+<!--                android:text="semanal"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/image_semanal"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/text_mensal" />-->
+
+<!--            <ImageView-->
+
+<!--                android:id="@+id/image_avulso"-->
+<!--                android:layout_width="10dp"-->
+<!--                android:layout_height="10dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:background="@color/lighter_purple"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/text_avulso"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/text_avulso" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/text_avulso"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:layout_margin="5dp"-->
+
+<!--                android:text="avulso"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/image_avulso"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/text_semanal" />-->
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

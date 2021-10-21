@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.agendabelupet.R
 import com.example.agendabelupet.models.entities.ItemEntity
+import com.google.type.DateTime
 import org.w3c.dom.Text
 import java.text.SimpleDateFormat
 import java.util.*
@@ -58,44 +59,31 @@ class DogListAdapter(
         viewHolder.petDistrict.text = "Bairro : ${item.district}"
         viewHolder.petHouseNumber.text = "Nº ${item.houseNumber}"
         val c = Calendar.getInstance()
-        if (item.dataQuinzenal != "") {
-            val diaTeste = sdf.parse(item.dataQuinzenal)
-            val diff = System.currentTimeMillis() - diaTeste.time
-            val diffDays = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)
-            when {
-                diffDays.toInt() in 0..1 -> {
-                    viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.green))
-                    viewHolder.nextDay.text = "Póximo coleta: hoje}"
-                }
-                diffDays.toInt() < 14 -> {
-                    val data = Date(diaTeste.time)
-                    viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.purple_500))
-                    viewHolder.nextDay.text = "Póximo dia :${sdf.format(data)}"
-                }
-                else -> {
-                    c.add(Calendar.DATE, 14)
-                    val data = Date(c.timeInMillis)
-                    viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.purple_500))
-                    viewHolder.nextDay.text = "Póximo dia :${sdf.format(data)}"
-                }
-            }
-        } else {
-            val weekDay = c.get(Calendar.DAY_OF_WEEK)
+        val weekDay = c.get(Calendar.DAY_OF_WEEK)
+        val dataNow = sdf.format(Date())
+        if (item.dataQuinzenal == "") {
             if ((item.weekDay == "Segunda" && weekDay == Calendar.MONDAY) ||
                 (item.weekDay == "Terça" && weekDay == Calendar.TUESDAY) ||
-                (item.weekDay == "Quarta" && weekDay == Calendar.THURSDAY) ||
-                (item.weekDay == "Quinta" && weekDay == Calendar.WEDNESDAY) ||
+                (item.weekDay == "Quarta" && weekDay == Calendar.WEDNESDAY) ||
+                (item.weekDay == "Quinta" && weekDay == Calendar.THURSDAY) ||
                 (item.weekDay == "Sexta" && weekDay == Calendar.FRIDAY) ||
                 (item.weekDay == "Sábado" && weekDay == Calendar.SATURDAY)
             ) {
                 viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.green))
-                viewHolder.nextDay.text = "Póxima coleta : Hoje"
+                viewHolder.nextDay.text = "Próxima coleta : Hoje"
             } else {
                 viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.purple_500))
                 viewHolder.nextDay.text = "Semanal"
             }
+        } else {
 
+            if (dataNow == item.dataQuinzenal) {
+                viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.green))
+                viewHolder.nextDay.text = "Próxima coleta : Hoje"
+            } else {
+                viewHolder.nextDay.setTextColor(ContextCompat.getColor(context, R.color.purple_500))
+                viewHolder.nextDay.text = "Póxima coleta : ${item.dataQuinzenal}"
+            }
         }
     }
-
 }
