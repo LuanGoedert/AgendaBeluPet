@@ -1,4 +1,4 @@
-package com.example.agendabelupet
+package app.example.agendabelupet
 
 import org.junit.Test
 

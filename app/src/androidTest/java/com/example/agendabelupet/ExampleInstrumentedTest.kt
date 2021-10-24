@@ -1,4 +1,4 @@
-package com.example.agendabelupet
+package app.example.agendabelupet
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
