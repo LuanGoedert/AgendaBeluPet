@@ -43,6 +43,24 @@ class DogListFragment : Fragment() {
 
         customDialogsExt = CustomDialogsExt(requireActivity())
 
+
+        viewModel.succesOnDelete.observe(viewLifecycleOwner) {
+            it?.let {
+                if (it) {
+                    viewModel.successOnDeleteItemFromFireBase.value = false
+                    customDialogsExt.defaultDialog(
+                        title = R.string.text_sucess_to_delete,
+                        image = R.drawable.icone_sucesso,
+                        onPositive = {
+                            customDialogsExt.dismissCustomFragment()
+                            navigateToAgendaFragment()
+                        }
+                    )
+                }
+            }
+        }
+
+
         binding.textPetOwner.text = getString(R.string.text_owner, args.itemEntity.ownerName)
         binding.textPetName.text = getString(R.string.text_pet_name, args.itemEntity.name)
         binding.textPetRace.text = getString(R.string.text_race, args.itemEntity.race)
@@ -52,7 +70,8 @@ class DogListFragment : Fragment() {
             R.string.text_phone_number,
             PhoneNumberUtils.formatNumber(args.itemEntity.phone, "BR")
         )
-        binding.textPlanValue.text = getString(R.string.text_plan_value, args.itemEntity.value.toString())
+        binding.textPlanValue.text =
+            getString(R.string.text_plan_value, args.itemEntity.value.toString())
         binding.textPetDistrict.text = getString(R.string.text_district, args.itemEntity.district)
         binding.textPetStreet.text = getString(R.string.text_sreet, args.itemEntity.street)
         binding.textPetHouseNumber.text = getString(R.string.text_n, args.itemEntity.houseNumber)
@@ -64,11 +83,30 @@ class DogListFragment : Fragment() {
             navigateToEditFragment(args.itemEntity)
         }
 
+        binding.buttonExcludePlan.setOnClickListener {
+            customDialogsExt.defaultDialogTwoOptions(
+                message = R.string.text_exclude_plan_question,
+                image = R.drawable.dog_image,
+                onPositive = {
+                    customDialogsExt.dismissCustomFragment()
+                    viewModel.initLoading()
+                    viewModel.deleteLoosePlan(args.itemEntity).invokeOnCompletion {
+                        viewModel.stopLoading()
+                    }
+
+                },
+                onNegative = {
+                    customDialogsExt.dismissCustomFragment()
+                }
+            )
+        }
+
         binding.buttonCollect.setOnCheckedChangeListener { buttonView, isChecked ->
             if (!args.itemEntity.collected) {
                 viewModel.viewModelScope.launch {
 
-                    viewModel.markItemAsCollected(args.itemEntity, args.itemEntity.dataQuinzenal) }
+                    viewModel.markItemAsCollected(args.itemEntity, args.itemEntity.dataQuinzenal)
+                }
                     .invokeOnCompletion {
                         val title = if (args.itemEntity.planType == "Avulso") {
                             R.string.text_item_avulso
@@ -81,7 +119,7 @@ class DogListFragment : Fragment() {
                             isCancelable = false
                         ) {
                             if (args.itemEntity.planType == "Avulso") {
-                                viewModel.viewModelScope.launch { viewModel.deleteLoosePlan(args.itemEntity.id) }
+                                viewModel.viewModelScope.launch { viewModel.deleteLoosePlan(args.itemEntity) }
                                     .invokeOnCompletion {
                                         customDialogsExt.dismissCustomFragment()
                                         navigateToAgendaFragment()

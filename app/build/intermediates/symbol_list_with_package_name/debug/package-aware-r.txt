@@ -1209,6 +1209,7 @@ color highlighted_text_material_light
 color light_blue
 color lighter_purple
 color lilas
+color magenta
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -2181,6 +2182,7 @@ id button
 id buttonPanel
 id button_collect
 id button_edit_plan
+id button_exclude_plan
 id button_get_items_from_firestore
 id button_logoff
 id button_nao
@@ -2233,6 +2235,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id cs_format
 id currentState
 id custom
 id customPanel
@@ -2325,6 +2328,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id image_dialog
 id image_dialog_two_options
 id immediateStop
@@ -2594,7 +2598,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView2
 id textWatcher
 id text_collected
@@ -2634,6 +2637,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id title_warning_two_options
 id toggle
 id toolbar_main
 id top
@@ -3091,6 +3095,8 @@ string text_endere_o
 string text_error
 string text_error_on_delete_account
 string text_error_on_sync
+string text_exclude_plan
+string text_exclude_plan_question
 string text_excluir_conta
 string text_fill_all_fields
 string text_house_number
@@ -3134,6 +3140,8 @@ string text_sreet
 string text_street
 string text_succes_delete_account
 string text_sucess_on_sync
+string text_sucess_to_delete
+string text_synchronize
 string text_telephone
 string text_ter_a
 string text_tipo_de_plano

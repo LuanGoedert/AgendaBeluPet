@@ -7,11 +7,11 @@
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     android:layout_gravity="center"
-    android:padding="16dp"
     >
 
     <ImageView
         android:id="@+id/image_dialog_two_options"
+        android:layout_marginTop="20dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,48 +19,61 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/title_warning_two_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/image_dialog_two_options"
+        app:layout_constraintStart_toStartOf="@+id/image_dialog_two_options"
+        app:layout_constraintTop_toBottomOf="@+id/image_dialog_two_options" />
+
+    <TextView
         android:id="@+id/text_warning_two_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:textAlignment="center"
-        android:textSize="25sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button_sim"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_dialog_two_options" />
+        app:layout_constraintTop_toBottomOf="@+id/title_warning_two_options" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cs_format"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/button_nao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:strokeColor="@color/light_blue"
-        app:cornerRadius="2dp"
-        app:strokeWidth="2dp"
-        app:backgroundTint="@color/white"
         android:text="@string/text_n_o"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/text_warning"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_warning_two_options" />
+        app:layout_constraintEnd_toStartOf="@+id/cs_format"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
 
         android:id="@+id/button_sim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:strokeColor="@color/light_blue"
-        app:cornerRadius="2dp"
-        app:strokeWidth="2dp"
-        app:backgroundTint="@color/white"
         android:text="@string/text_sim"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/text_warning"
-        app:layout_constraintTop_toBottomOf="@+id/text_warning_two_options" />
+        app:layout_constraintStart_toEndOf="@+id/cs_format" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

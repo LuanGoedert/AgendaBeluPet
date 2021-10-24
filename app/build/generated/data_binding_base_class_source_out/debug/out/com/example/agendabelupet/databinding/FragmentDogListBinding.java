@@ -26,6 +26,9 @@ public abstract class FragmentDogListBinding extends ViewDataBinding {
   public final Button buttonEditPlan;
 
   @NonNull
+  public final Button buttonExcludePlan;
+
+  @NonNull
   public final CardView cardView;
 
   @NonNull
@@ -62,13 +65,14 @@ public abstract class FragmentDogListBinding extends ViewDataBinding {
   protected DogListViewModel mViewModel;
 
   protected FragmentDogListBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialCheckBox buttonCollect, Button buttonEditPlan, CardView cardView,
-      TextView textPetDistrict, TextView textPetHouseNumber, TextView textPetName,
-      TextView textPetOwner, TextView textPetRace, TextView textPetStreet, TextView textPetWeekDay,
-      TextView textPhone, TextView textPlan, TextView textPlanValue) {
+      MaterialCheckBox buttonCollect, Button buttonEditPlan, Button buttonExcludePlan,
+      CardView cardView, TextView textPetDistrict, TextView textPetHouseNumber,
+      TextView textPetName, TextView textPetOwner, TextView textPetRace, TextView textPetStreet,
+      TextView textPetWeekDay, TextView textPhone, TextView textPlan, TextView textPlanValue) {
     super(_bindingComponent, _root, _localFieldCount);
     this.buttonCollect = buttonCollect;
     this.buttonEditPlan = buttonEditPlan;
+    this.buttonExcludePlan = buttonExcludePlan;
     this.cardView = cardView;
     this.textPetDistrict = textPetDistrict;
     this.textPetHouseNumber = textPetHouseNumber;

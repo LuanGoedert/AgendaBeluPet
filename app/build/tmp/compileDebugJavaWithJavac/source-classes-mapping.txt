@@ -14,8 +14,8 @@ com/example/agendabelupet/ui/dogList/DogListFragmentArgs.java
  com.example.agendabelupet.ui.dogList.DogListFragmentArgs
  com.example.agendabelupet.ui.dogList.DogListFragmentArgs$1
  com.example.agendabelupet.ui.dogList.DogListFragmentArgs$Builder
-com/example/agendabelupet/DataBindingTriggerClass.java
- com.example.agendabelupet.DataBindingTriggerClass
+com/example/agendabelupet/databinding/LoginFragmentBinding.java
+ com.example.agendabelupet.databinding.LoginFragmentBinding
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
 com/example/agendabelupet/database/AppDataBase_Impl.java
@@ -88,8 +88,8 @@ com/example/agendabelupet/databinding/FragmentDogListBindingImpl.java
  com.example.agendabelupet.databinding.FragmentDogListBindingImpl
 com/example/agendabelupet/databinding/FragmentDogListBinding.java
  com.example.agendabelupet.databinding.FragmentDogListBinding
-com/example/agendabelupet/databinding/FragmentCollectedItemsBinding.java
- com.example.agendabelupet.databinding.FragmentCollectedItemsBinding
+com/example/agendabelupet/databinding/LoginFragmentBindingImpl.java
+ com.example.agendabelupet.databinding.LoginFragmentBindingImpl
 com/example/agendabelupet/ui/agenda/AgendaFragmentDirections.java
  com.example.agendabelupet.ui.agenda.AgendaFragmentDirections
  com.example.agendabelupet.ui.agenda.AgendaFragmentDirections$1
@@ -114,7 +114,7 @@ com/example/agendabelupet/databinding/FragmentProfitBindingImpl.java
  com.example.agendabelupet.databinding.FragmentProfitBindingImpl
 androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
-com/example/agendabelupet/databinding/LoginFragmentBindingImpl.java
- com.example.agendabelupet.databinding.LoginFragmentBindingImpl
-com/example/agendabelupet/databinding/LoginFragmentBinding.java
- com.example.agendabelupet.databinding.LoginFragmentBinding
+com/example/agendabelupet/DataBindingTriggerClass.java
+ com.example.agendabelupet.DataBindingTriggerClass
+com/example/agendabelupet/databinding/FragmentCollectedItemsBinding.java
+ com.example.agendabelupet.databinding.FragmentCollectedItemsBinding

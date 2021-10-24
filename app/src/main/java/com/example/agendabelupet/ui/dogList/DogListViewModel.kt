@@ -1,6 +1,8 @@
 package com.example.agendabelupet.ui.dogList
 
 import android.app.Application
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.agendabelupet.database.FireBaseDb
 import com.example.agendabelupet.models.entities.ItemEntity
@@ -20,6 +22,17 @@ class DogListViewModel(
     application, fireBaseDb, itemRepositoryImpl
 ) {
 
+    private val mLoadingProgressBar = MutableLiveData(false)
+    val loadingProgressBar: LiveData<Boolean>
+        get() {
+            return mLoadingProgressBar
+        }
+
+    val succesOnDelete :LiveData<Boolean>
+    get(){
+        return successOnDeleteItemFromFireBase
+    }
+
     val sdf = SimpleDateFormat("dd/MM/yyyy")
 
     suspend fun getItemFromRepoById(id: Int): ItemEntity {
@@ -30,8 +43,17 @@ class DogListViewModel(
         updateDocument(userRepositoryImpl.getUser().userEmail, ownerName, phone, itemEntity)
     }
 
-    suspend fun deleteLoosePlan(id: Int) = viewModelScope.launch {
-        itemRepositoryImpl.deleteItemById(id)
+    fun deleteLoosePlan(itemEntity: ItemEntity) = viewModelScope.launch {
+        deleteDocument(userRepositoryImpl.getUser().userEmail, itemEntity.ownerName, itemEntity.phone)
+        itemRepositoryImpl.deleteItemById(itemEntity.id)
+    }
+
+    fun initLoading() = viewModelScope.launch {
+        mLoadingProgressBar.value = true
+    }
+
+    fun stopLoading() = viewModelScope.launch {
+        mLoadingProgressBar.value = false
     }
 
 
@@ -63,4 +85,5 @@ class DogListViewModel(
         itemToUpdate.collected = false
         updateItem( itemEntity, itemEntity.ownerName, itemEntity.phone)
     }
+
 }

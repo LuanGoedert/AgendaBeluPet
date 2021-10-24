@@ -47,7 +47,8 @@ class CustomDialogsExt(val activity: Activity) {
     }
 
     fun defaultDialogTwoOptions(
-        title : Int,
+        title : Int? =  null,
+        message: Int,
         image: Int,
         isCancelable: Boolean = true ,
         onPositive: () -> Unit,
@@ -57,7 +58,10 @@ class CustomDialogsExt(val activity: Activity) {
         val dialogView = inflater.inflate(R.layout.fragment_two_options, null)
         val builder = AlertDialog.Builder(activity)
         builder.setView(dialogView)
-        dialogView.text_warning_two_options.setText(title)
+        dialogView.text_warning_two_options.setText(message)
+        if(title != null ){
+            dialogView.title_warning_two_options.setText(title)
+        }
         dialogView.image_dialog_two_options.setImageResource(image)
         dialogView.button_sim.setOnClickListener{ onPositive() }
         dialogView.button_nao.setOnClickListener{ onNegative() }

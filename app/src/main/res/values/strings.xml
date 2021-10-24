@@ -102,12 +102,13 @@
     <string name="text_atencao">Atenção!\n selecione o dia da semana a opção quinzenal</string>
     <string name="text_item_avulso">O Item foi marcado como coletado e será excluído logo após por ser Avulso</string>
     <string name="test_wrong_day">O dia selecionado no calendario precisa ser o mesmo da semana</string>
-    <string name="text_confirmationn_firebase">todos os Itens locais serão substituidos pelos arquivos em nuvem</string>
+    <string name="text_confirmationn_firebase">Os itens locais serão substituidos pelos arquivos em nuvem</string>
     <string name="text_sim">sim</string>
     <string name="text_n_o">Não</string>
     <string name="text_sair">sair</string>
     <string name="text_obter_dados_salvos_na_online">Obter dados salvos online</string>
     <string name="text_sucess_on_sync">Sucesso ao sincronizar com a nuvem</string>
+    <string name="text_sucess_to_delete">Sucesso ao deletar o plano</string>
     <string name="text_error_on_sync">Erro ao sincronizar os dados com a nuvem</string>
     <string name="text_excluir_conta">Excluir conta</string>
     <string name="text_logoff">Sair do aplicativo?</string>
@@ -116,4 +117,7 @@
     <string name="text_error_on_delete_account">Erro ao tentar deletar a conta</string>
     <string name="text_mark_as_not_collceted">Marcar todos itens como Não coletados</string>
     <string name="marcar_todos_itens_como_coletados">Marcar todos itens como coletados</string>
+    <string name="text_exclude_plan">excluir plano</string>
+    <string name="text_exclude_plan_question">Excluir Plano?</string>
+    <string name="text_synchronize">Sincronizar Dados?</string>
 </resources>

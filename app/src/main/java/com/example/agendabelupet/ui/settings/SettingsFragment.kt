@@ -112,7 +112,7 @@ class SettingsFragment : Fragment() {
 
         binding.excludeAccount.setOnClickListener {
             customDialogsExt.defaultDialogTwoOptions(
-                title = R.string.text_delete_account,
+                message = R.string.text_delete_account,
                 image = R.drawable.ic_exit,
                 isCancelable = false,
                 onPositive = {
@@ -131,7 +131,7 @@ class SettingsFragment : Fragment() {
 
         binding.buttonLogoff.setOnClickListener {
             customDialogsExt.defaultDialogTwoOptions(
-                title = R.string.text_logoff,
+                message = R.string.text_logoff,
                 image = R.drawable.ic_exit,
                 isCancelable = false,
                 onPositive = {
@@ -153,7 +153,8 @@ class SettingsFragment : Fragment() {
         binding.buttonGetItemsFromFirestore.setOnClickListener {
             viewModel.viewModelScope.launch {
                 customDialogsExt.defaultDialogTwoOptions(
-                    title = R.string.text_confirmationn_firebase,
+                    title = R.string.text_synchronize,
+                    message = R.string.text_confirmationn_firebase,
                     image = R.drawable.icone_alerta,
                     isCancelable = false,
                     onPositive = {

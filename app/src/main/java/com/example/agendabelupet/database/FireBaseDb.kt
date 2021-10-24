@@ -26,6 +26,7 @@ abstract class FireBaseDb(
 
 
     val successOnGetItemFromFireBase = MutableLiveData<Boolean>()
+    val successOnDeleteItemFromFireBase = MutableLiveData<Boolean>(false)
 
     protected val successOnDeleteAccountFireBase = MutableLiveData<Boolean>()
 
@@ -50,6 +51,16 @@ abstract class FireBaseDb(
                 db.collection(userEmail).document("$ownerName - $phone")
                     .set(itemEntity)
             }
+    }
+
+    fun deleteDocument(
+        userEmail: String,
+        ownerName: String,
+        phone: String,
+    ) {
+        db.collection(userEmail).document("$ownerName - $phone").delete().addOnSuccessListener {
+            successOnDeleteItemFromFireBase.value = true
+        }
     }
 
     protected fun getuserDocument(userEmail: String, showMessage: Boolean) = viewModelScope.launch {

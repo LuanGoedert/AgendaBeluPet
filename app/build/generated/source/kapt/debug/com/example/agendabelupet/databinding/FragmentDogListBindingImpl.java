@@ -27,6 +27,7 @@ public class FragmentDogListBindingImpl extends FragmentDogListBinding  {
         sViewsWithIds.put(R.id.text_pet_house_number, 11);
         sViewsWithIds.put(R.id.button_collect, 12);
         sViewsWithIds.put(R.id.button_edit_plan, 13);
+        sViewsWithIds.put(R.id.button_exclude_plan, 14);
     }
     // views
     @NonNull
@@ -37,12 +38,13 @@ public class FragmentDogListBindingImpl extends FragmentDogListBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentDogListBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private FragmentDogListBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (com.google.android.material.checkbox.MaterialCheckBox) bindings[12]
             , (android.widget.Button) bindings[13]
+            , (android.widget.Button) bindings[14]
             , (androidx.cardview.widget.CardView) bindings[1]
             , (android.widget.TextView) bindings[9]
             , (android.widget.TextView) bindings[11]
