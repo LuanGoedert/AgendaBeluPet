@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
+            "outputFile": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Luan\\.gradle\\caches\\transforms-2\\files-2.1\\e27c9097dfd266e47723953478fea443\\jetified-play-services-basement-17.5.0\\res\\values-gl\\values.xml",

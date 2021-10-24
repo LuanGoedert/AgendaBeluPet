@@ -48,6 +48,8 @@ public final class ItemDao_Impl implements ItemDao {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteItemById;
 
+  private final SharedSQLiteStatement __preparedStmtOfSetItemsCollecte;
+
   public ItemDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfItemEntity = new EntityInsertionAdapter<ItemEntity>(__db) {
@@ -231,6 +233,13 @@ public final class ItemDao_Impl implements ItemDao {
       @Override
       public String createQuery() {
         final String _query = "DELETE FROM ItemEntity WHERE id =?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfSetItemsCollecte = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE ItemEntity SET collected = ?";
         return _query;
       }
     };
@@ -486,6 +495,29 @@ public final class ItemDao_Impl implements ItemDao {
         } finally {
           __db.endTransaction();
           __preparedStmtOfDeleteItemById.release(_stmt);
+        }
+      }
+    }, p1);
+  }
+
+  @Override
+  public Object setItemsCollecte(final boolean collected, final Continuation<? super Unit> p1) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfSetItemsCollecte.acquire();
+        int _argIndex = 1;
+        final int _tmp;
+        _tmp = collected ? 1 : 0;
+        _stmt.bindLong(_argIndex, _tmp);
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfSetItemsCollecte.release(_stmt);
         }
       }
     }, p1);

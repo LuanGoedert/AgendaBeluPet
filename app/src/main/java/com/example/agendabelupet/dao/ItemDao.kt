@@ -58,4 +58,7 @@ interface ItemDao {
 
     @Query("SELECT value FROM ItemEntity WHERE planType = 'Quinzenal' ")
     suspend fun getValuesQuinzenal(): List<Int>
+
+    @Query("UPDATE ItemEntity SET collected = :collected")
+    suspend fun setItemsCollecte(collected: Boolean)
 }

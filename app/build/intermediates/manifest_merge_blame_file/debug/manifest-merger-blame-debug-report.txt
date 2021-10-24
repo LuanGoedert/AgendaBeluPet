@@ -6,23 +6,23 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="29"
-8-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+8-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+9-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 10
 11    <uses-feature
-11-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:5:5-7:35
+11-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:5:5-7:35
 12        android:name="android.hardware.camera"
-12-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:6:9-47
+12-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:6:9-47
 13        android:required="true" />
-13-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:7:9-32
+13-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:7:9-32
 14
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:8:5-66
-15-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:8:22-64
+15-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:8:5-66
+15-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:8:22-64
 16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:9:5-81
-16-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:9:22-78
+16-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:9:5-81
+16-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:9:22-78
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 17-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1a463fc49b6bf5deb2a6645aaa10edcc\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
 17-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1a463fc49b6bf5deb2a6645aaa10edcc\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:22-76
@@ -31,45 +31,45 @@
 18-->[com.wdullaer:materialdatetimepicker:4.2.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\931cc33c9063fa618de7fd013ba26bfd\jetified-materialdatetimepicker-4.2.3\AndroidManifest.xml:26:22-63
 19
 20    <application
-20-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:11:5-30:19
+20-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:11:5-30:19
 21        android:name="com.example.agendabelupet.MainApplication"
-21-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:12:9-40
+21-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:12:9-40
 22        android:allowBackup="true"
-22-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:13:9-35
+22-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:13:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.6.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e8072191b7b41e5e30b55b6258d9eddf\core-1.6.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:extractNativeLibs="false"
 26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:14:9-43
+26-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:14:9-43
 27        android:label="@string/app_name"
-27-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:15:9-41
+27-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:15:9-41
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:16:9-54
+28-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:16:9-54
 29        android:supportsRtl="true"
-29-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:17:9-35
+29-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:17:9-35
 30        android:testOnly="true"
 31        android:theme="@style/ThemeOverlay.MaterialComponents.Dark" >
-31-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:18:9-68
+31-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:18:9-68
 32        <activity
-32-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:19:9-29:20
+32-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:19:9-29:20
 33            android:name="com.example.agendabelupet.NavigationDrawerActivity"
-33-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:20:13-53
+33-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:20:13-53
 34            android:label="@string/app_name"
-34-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:21:13-45
+34-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:21:13-45
 35            android:screenOrientation="portrait"
-35-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:23:13-49
+35-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:23:13-49
 36            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
-36-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:22:14-79
+36-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:22:14-79
 37            <intent-filter>
-37-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:24:13-28:29
+37-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:24:13-28:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:25:17-69
-38-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:25:25-66
+38-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:25:17-69
+38-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:25:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:27:17-77
-40-->C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:27:27-74
+40-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:27:17-77
+40-->C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:27:27-74
 41            </intent-filter>
 42        </activity>
 43

@@ -21,4 +21,5 @@ interface ItemRepository {
     suspend fun getValuesQuinzenal(): List<Int>
     suspend fun getValuesSemanal(): List<Int>
     suspend fun getItemById(id:Int): ItemEntity
+    suspend fun setItemsCollected(collected: Boolean)
 }

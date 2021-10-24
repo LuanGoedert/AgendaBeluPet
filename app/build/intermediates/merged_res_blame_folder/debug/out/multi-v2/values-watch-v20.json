@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Luan\\.gradle\\caches\\transforms-2\\files-2.1\\a41278567e91993b0fb639c57e74f36b\\jetified-play-services-auth-19.2.0\\res\\values-watch-v20\\values.xml",

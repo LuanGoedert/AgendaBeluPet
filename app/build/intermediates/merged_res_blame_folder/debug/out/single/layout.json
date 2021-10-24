@@ -1,30 +1,30 @@
 [
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\login_fragment.xml",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\login_fragment.xml"
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_new_plan.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\fragment_new_plan.xml"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agenda.xml",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_agenda.xml"
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agenda.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\fragment_agenda.xml"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_collected_items.xml",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_collected_items.xml"
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_settings.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\fragment_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dog_list.xml",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_dog_list.xml"
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profit.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\fragment_profit.xml"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profit.xml",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_profit.xml"
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\login_fragment.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\login_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_new_plan.xml",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_new_plan.xml"
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_collected_items.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\fragment_collected_items.xml"
     },
     {
-        "merged": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_settings.xml",
-        "source": "C:\\Users\\Luan\\Desktop\\AgendaBeluPet\\app\\src\\main\\res\\layout\\fragment_settings.xml"
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dog_list.xml",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\fragment_dog_list.xml"
     }
 ]

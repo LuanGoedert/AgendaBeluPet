@@ -88,4 +88,8 @@ class ItemRepositoryImpl (private val itemDao: ItemDao): ItemRepository {
     override suspend fun getItemById(id: Int):ItemEntity {
         return itemDao.getItemById(id)
     }
+
+    override suspend fun setItemsCollected(collected: Boolean) {
+        itemDao.setItemsCollecte(collected)
+    }
 }

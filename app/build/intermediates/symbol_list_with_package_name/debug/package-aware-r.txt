@@ -2011,9 +2011,11 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable ic_pet
 drawable icone_alerta
+drawable icone_alerta_vermelho
 drawable icone_erro
 drawable icone_settings
 drawable icone_sucesso
+drawable icone_triste
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2221,6 +2223,7 @@ id collectedItemsFragment
 id confirm_button
 id cons_top
 id constraint
+id constraintLayout
 id constraint_item
 id container
 id content

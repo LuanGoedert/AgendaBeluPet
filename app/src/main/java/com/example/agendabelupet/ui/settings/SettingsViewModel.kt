@@ -38,6 +38,13 @@ class SettingsViewModel(
         viewModelScope.launch { user.value = userRepositoryImpl.getUser() }
     }
 
+    fun setItemsCOllected(collected: Boolean) = viewModelScope.launch{
+        itemRepositoryImpl.setItemsCollected(collected)
+        itemRepositoryImpl.getAllItems().forEach { item ->
+            updateDocument(user.value!!.userEmail, item.ownerName, item.phone, item)
+        }
+    }
+
     fun getItemsFirebase(userEmail: String) = viewModelScope.launch {
         getuserDocument(userEmail, true).invokeOnCompletion {
             viewModelScope.launch {

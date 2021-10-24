@@ -7,8 +7,7 @@
         android:angle="90"
         android:centerColor="@color/light_blue"
         android:endColor="@color/light_blue"
-        android:startColor="@color/lighter_purple" />
-    <corners android:radius="15dp" />
+        android:startColor="@color/light_blue" />
     <padding
         android:bottom="0dp"
         android:left="0dp"

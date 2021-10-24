@@ -25,7 +25,7 @@ abstract class FireBaseDb(
     private var auth: FirebaseAuth = Firebase.auth
 
 
-    protected val successOnGetItemFromFireBase = MutableLiveData<Boolean>()
+    val successOnGetItemFromFireBase = MutableLiveData<Boolean>()
 
     protected val successOnDeleteAccountFireBase = MutableLiveData<Boolean>()
 

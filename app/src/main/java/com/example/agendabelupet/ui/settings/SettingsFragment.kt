@@ -94,12 +94,20 @@ class SettingsFragment : Fragment() {
         }
 
         binding.buttonSetItemsCollected.setOnClickListener {
-
+            viewModel.initLoading()
+            viewModel.setItemsCOllected(true).invokeOnCompletion {
+                viewModel.stopLoading()
+                viewModel.successOnGetItemFromFireBase.value = true
+            }
         }
 
 
         binding.buttonSetItemsNotCollected.setOnClickListener {
-
+            viewModel.initLoading()
+            viewModel.setItemsCOllected(false).invokeOnCompletion {
+                viewModel.stopLoading()
+                viewModel.successOnGetItemFromFireBase.value = true
+            }
         }
 
         binding.excludeAccount.setOnClickListener {

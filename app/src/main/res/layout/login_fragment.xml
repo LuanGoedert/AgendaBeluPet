@@ -16,32 +16,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:background="@color/magenta"
         >
 
-        <TextView
-            android:id="@+id/textView"
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Olá"
-            android:textSize="25sp"
-            android:textColor="@color/light_blue"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="50dp"/>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Para faclitar o uso do app,\n faça login com sua conta do google"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="20dp"
-            android:textSize="25sp"
-            android:textColor="@color/light_blue"
+            android:text="Bem vindo!\nPara faclitar o uso do app,\n faça login com sua\n conta do google"
             android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
 
         <com.google.android.gms.common.SignInButton

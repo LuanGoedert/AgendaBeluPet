@@ -76,16 +76,18 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         customDialogsExt = CustomDialogsExt(requireActivity())
+        viewModel.initLoading()
+        viewModel.getLocalUser(requireContext(), requireActivity())
 
-//        viewModel.currentUser.observe(viewLifecycleOwner) {
-//            it?.let {
-//                viewModel.mloadingScreen.postValue(true)
-//                viewModel.updateUI(it, requireContext(), requireActivity()).invokeOnCompletion {
-//                    viewModel.mloadingScreen.postValue(false)
-//                    navigateToAgendaFragment()
-//                }
-//            }
-//        }
+
+
+        viewModel.mCurrentuser.observe(viewLifecycleOwner) {
+            it?.let {
+                viewModel.updateUI(it, requireContext(), requireActivity()).invokeOnCompletion {
+                    navigateToAgendaFragment()
+                }
+            }
+        }
 
         viewModel.loginError.observe(viewLifecycleOwner) {
             it?.let {
@@ -146,7 +148,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun navigateToAgendaFragment() {
-        viewModel.mloadingScreen.postValue(false)
+        viewModel.stopLoading()
         val action = LoginFragmentDirections.actionLoginFragmentToFragmentAgenda()
         findNavController().navigate(action)
     }

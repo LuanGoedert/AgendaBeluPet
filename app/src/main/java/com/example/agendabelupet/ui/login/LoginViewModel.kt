@@ -32,25 +32,26 @@ class LoginViewModel(application: Application, private val userRepositoryImpl: U
             return mLoginError
         }
 
-    init {
-        viewModelScope.launch {
-//            getLocalUser()
+    fun getLocalUser(context: Context, activity: Activity) = viewModelScope.launch {
+        userRepositoryImpl.getUser().also {
+            if (it != null) {
+                mCurrentuser.value = it
+                updateUI(mCurrentuser.value!!, context, activity)
+            }else {
+                stopLoading()
+            }
         }
     }
 
-    suspend fun getLocalUser(context: Context, activity: Activity) = viewModelScope.launch {
-        mCurrentuser.value = userRepositoryImpl.getUser()
-        updateUI(mCurrentuser.value!!, context, activity)
+    fun initLoading() = viewModelScope.launch {
+        mloadingScreen.value = true
     }
 
-    private fun insertUser(user: FirebaseUser) = viewModelScope.launch {
-        val userEntity = UserEntity(
-            userName = user.displayName.toString(),
-            userEmail = user.email.toString(),
-            userPhotoUri = user.photoUrl.toString()
-        )
-        userRepositoryImpl.insertUser(userEntity)
+    fun stopLoading() = viewModelScope.launch {
+        mloadingScreen.value = false
     }
+
+
 
     fun updateUI(user: UserEntity, context: Context, activity: Activity) = viewModelScope.launch {
         try {
@@ -83,4 +84,13 @@ class LoginViewModel(application: Application, private val userRepositoryImpl: U
                     }
                 }
         }
+
+    private fun insertUser(user: FirebaseUser) = viewModelScope.launch {
+        val userEntity = UserEntity(
+            userName = user.displayName.toString(),
+            userEmail = user.email.toString(),
+            userPhotoUri = user.photoUrl.toString()
+        )
+        userRepositoryImpl.insertUser(userEntity)
+    }
 }

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [androidx.databinding:databinding-adapters:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ad2e55da6ef8aad24967a68d8ebec350\databinding-adapters-4.1.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\feb1d1d771f1a22a759351c199082b3a\databinding-runtime-4.1.3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.firebaseui:firebase-ui-storage:7.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\965f437afe8962e92a5e87c5d00a326b\jetified-firebase-ui-storage-7.2.0\AndroidManifest.xml:2:1-11:12
@@ -105,31 +105,31 @@ MERGED from [org.koin:koin-android:2.2.2] C:\Users\Luan\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7547777f33609bc718fc23cc5d21fc71\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\c4a3a2c06306da39400a8a4f6ffc5406\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f06016afbef101fb94acfd140906fe13\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:3:5-40
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:2:11-69
 uses-feature#android.hardware.camera
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:5:5-7:35
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:5:5-7:35
 	android:required
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:7:9-32
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:7:9-32
 	android:name
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:6:9-47
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:6:9-47
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:8:5-66
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:8:5-66
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1a463fc49b6bf5deb2a6645aaa10edcc\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\1a463fc49b6bf5deb2a6645aaa10edcc\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\21a6374a8fa7d9007072ae54058b3c1f\jetified-firebase-firestore-23.0.3\AndroidManifest.xml:14:5-67
@@ -137,13 +137,13 @@ MERGED from [com.google.firebase:firebase-firestore:23.0.3] C:\Users\Luan\.gradl
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f83f3e95ef4557db51a8c9af27fd5218\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f83f3e95ef4557db51a8c9af27fd5218\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
 	android:name
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:9:5-81
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:9:22-78
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:11:5-30:19
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:11:5-30:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fda1fd9befdb686a491f846da14fc664\jetified-firebase-firestore-ktx-23.0.3\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fda1fd9befdb686a491f846da14fc664\jetified-firebase-firestore-ktx-23.0.3\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\51a8e68fb4cf59e8587b3e5793cb4cc1\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
@@ -201,43 +201,43 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Luan\.gradle\
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\e8072191b7b41e5e30b55b6258d9eddf\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:18:9-68
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:18:9-68
 	android:name
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:12:9-40
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:12:9-40
 activity#com.example.agendabelupet.NavigationDrawerActivity
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:19:9-29:20
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:19:9-29:20
 	android:screenOrientation
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:23:13-49
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:23:13-49
 	android:label
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:21:13-45
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:21:13-45
 	android:theme
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:22:14-79
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:22:14-79
 	android:name
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:20:13-53
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:20:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml:27:27-74
 uses-sdk
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ad2e55da6ef8aad24967a68d8ebec350\databinding-adapters-4.1.3\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-adapters:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\ad2e55da6ef8aad24967a68d8ebec350\databinding-adapters-4.1.3\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.1.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\feb1d1d771f1a22a759351c199082b3a\databinding-runtime-4.1.3\AndroidManifest.xml:22:5-44
@@ -440,16 +440,16 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Lua
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\c4a3a2c06306da39400a8a4f6ffc5406\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f06016afbef101fb94acfd140906fe13\jetified-grpc-android-1.28.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\f06016afbef101fb94acfd140906fe13\jetified-grpc-android-1.28.0\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Luan\Desktop\AgendaBeluPet\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Luan\Desktop\android projects\AgendaBeluPet-master\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-firestore-ktx:23.0.3] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\fda1fd9befdb686a491f846da14fc664\jetified-firebase-firestore-ktx-23.0.3\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\51a8e68fb4cf59e8587b3e5793cb4cc1\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:8:9-14:19
