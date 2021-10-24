@@ -120,4 +120,8 @@
     <string name="text_exclude_plan">excluir plano</string>
     <string name="text_exclude_plan_question">Excluir Plano?</string>
     <string name="text_synchronize">Sincronizar Dados?</string>
+
+
+<!--    //importante-->
+    <string name="web_client">548494174-geo90f2ib97j92nou57ei6ff7800n1mp.apps.googleusercontent.com</string>
 </resources>

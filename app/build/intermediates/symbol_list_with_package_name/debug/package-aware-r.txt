@@ -2943,7 +2943,6 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
-string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -3156,6 +3155,7 @@ string title_dashboard
 string title_home
 string title_notifications
 string txt_dia_em_que_ir_come_ar_apenas_quinzenal
+string web_client
 string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

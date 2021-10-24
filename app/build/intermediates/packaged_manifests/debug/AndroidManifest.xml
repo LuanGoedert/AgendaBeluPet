@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.agendabelupet"
+    package="com.luan.agendabelupet"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -27,7 +27,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark" >
         <activity
             android:name="com.example.agendabelupet.NavigationDrawerActivity"
@@ -118,7 +117,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.example.agendabelupet.firebaseinitprovider"
+            android:authorities="com.luan.agendabelupet.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
@@ -154,7 +153,7 @@
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="com.example.agendabelupet.lifecycle-process"
+            android:authorities="com.luan.agendabelupet.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" />
     </application>

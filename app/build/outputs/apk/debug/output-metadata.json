@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.agendabelupet",
+  "applicationId": "com.luan.agendabelupet",
   "variantName": "processDebugResources",
   "elements": [
     {
