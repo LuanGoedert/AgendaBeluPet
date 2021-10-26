@@ -1,4 +1,8 @@
-#Sun Oct 24 19:52:13 BRT 2021
+<<<<<<< Updated upstream
+#Tue Oct 26 20:30:36 BRT 2021
+=======
+#Sun Oct 24 20:59:41 BRT 2021
+>>>>>>> Stashed changes
 path.3=classes3.dex
 path.2=classes2.dex
 path.1=classes.dex
