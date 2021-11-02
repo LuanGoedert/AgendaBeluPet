@@ -216,43 +216,43 @@
 116            </intent-filter>
 117        </service>
 118
-119        <provider
-119-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
-120            android:name="com.google.firebase.provider.FirebaseInitProvider"
-120-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-121            android:authorities="com.luan.agendabelupet.firebaseinitprovider"
-121-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
-122            android:directBootAware="true"
-122-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
-123            android:exported="false"
-123-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
-124            android:initOrder="100" />
-124-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
-125
-126        <activity
-126-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:23:9-27:75
-127            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-127-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:24:13-93
-128            android:excludeFromRecents="true"
-128-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:25:13-46
-129            android:exported="false"
-129-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:26:13-37
-130            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-130-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:27:13-72
-131        <!--
-132            Service handling Google Sign-In user revocation. For apps that do not integrate with
-133            Google Sign-In, this service will never be started.
-134        -->
-135        <service
-135-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:33:9-37:51
-136            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-136-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
-137            android:exported="true"
-137-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:35:13-36
-138            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-138-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
-139            android:visibleToInstantApps="true" />
-139-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:37:13-48
+119        <activity
+119-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:23:9-27:75
+120            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+120-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:24:13-93
+121            android:excludeFromRecents="true"
+121-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:25:13-46
+122            android:exported="false"
+122-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:26:13-37
+123            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+123-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:27:13-72
+124        <!--
+125            Service handling Google Sign-In user revocation. For apps that do not integrate with
+126            Google Sign-In, this service will never be started.
+127        -->
+128        <service
+128-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:33:9-37:51
+129            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+129-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
+130            android:exported="true"
+130-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:35:13-36
+131            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+131-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
+132            android:visibleToInstantApps="true" />
+132-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\a41278567e91993b0fb639c57e74f36b\jetified-play-services-auth-19.2.0\AndroidManifest.xml:37:13-48
+133
+134        <provider
+134-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+135            android:name="com.google.firebase.provider.FirebaseInitProvider"
+135-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+136            android:authorities="com.luan.agendabelupet.firebaseinitprovider"
+136-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+137            android:directBootAware="true"
+137-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+138            android:exported="false"
+138-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+139            android:initOrder="100" />
+139-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\9f707f8e5b8de9210e6f8e21c42d669e\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
 140
 141        <activity
 141-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Luan\.gradle\caches\transforms-2\files-2.1\7b5177dcd3e870ccda97bb18c6ea5d0e\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75

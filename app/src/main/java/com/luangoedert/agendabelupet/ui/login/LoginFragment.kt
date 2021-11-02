@@ -19,9 +19,8 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.luangoedert.agendabelupet.ui.login.LoginViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.login_fragment.*
-import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
@@ -33,9 +32,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var customDialogsExt: CustomDialogsExt
 
-
     private val viewModel: LoginViewModel by viewModel()
-
 
     companion object {
         private const val TAG = "GoogleActivity"
@@ -46,7 +43,7 @@ class LoginFragment : Fragment() {
         super.onCreate(savedInstanceState)
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.gcm_defaultSenderId))
+            .requestIdToken(getString(R.string.web_client))
             .requestEmail()
             .build()
 
@@ -79,8 +76,6 @@ class LoginFragment : Fragment() {
         viewModel.initLoading()
         viewModel.getLocalUser(requireContext(), requireActivity())
 
-
-
         viewModel.mCurrentuser.observe(viewLifecycleOwner) {
             it?.let {
                 viewModel.updateUI(it, requireContext(), requireActivity()).invokeOnCompletion {
@@ -112,7 +107,7 @@ class LoginFragment : Fragment() {
             }
         }
 
-        signInButton.setOnClickListener {
+        binding.signInButton.setOnClickListener {
             signIn()
         }
     }

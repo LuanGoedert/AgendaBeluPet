@@ -2013,6 +2013,7 @@ drawable ic_notifications_black_24dp
 drawable ic_pet
 drawable icone_alerta
 drawable icone_alerta_vermelho
+drawable icone_backgroud_button
 drawable icone_erro
 drawable icone_settings
 drawable icone_sucesso
@@ -2357,6 +2358,7 @@ id loginFragment
 id masked
 id match_constraint
 id match_parent
+id materialTextView
 id material_clock_display
 id material_clock_face
 id material_clock_hand
@@ -2598,7 +2600,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView2
 id textWatcher
 id text_collected
 id text_district
@@ -3146,6 +3147,7 @@ string text_ter_a
 string text_tipo_de_plano
 string text_tirar_foto_opcional
 string text_todos
+string text_user
 string text_value
 string text_wait
 string texttabela_de_lucros

@@ -1,4 +1,4 @@
-package com.example.agendabelupet.ui.login
+package com.luangoedert.agendabelupet.ui.login
 
 import android.app.Activity
 import android.app.Application
@@ -37,7 +37,7 @@ class LoginViewModel(application: Application, private val userRepositoryImpl: U
             if (it != null) {
                 mCurrentuser.value = it
                 updateUI(mCurrentuser.value!!, context, activity)
-            }else {
+            } else {
                 stopLoading()
             }
         }
@@ -50,7 +50,6 @@ class LoginViewModel(application: Application, private val userRepositoryImpl: U
     fun stopLoading() = viewModelScope.launch {
         mloadingScreen.value = false
     }
-
 
 
     fun updateUI(user: UserEntity, context: Context, activity: Activity) = viewModelScope.launch {

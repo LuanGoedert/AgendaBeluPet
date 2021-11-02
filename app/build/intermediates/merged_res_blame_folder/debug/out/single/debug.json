@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icone_backgroud_button.xml.flat",
+        "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\drawable\\icone_backgroud_button.xml"
+    },
+    {
         "merged": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_collected_items.xml.flat",
         "source": "C:\\Users\\Luan\\Desktop\\android projects\\AgendaBeluPet-master\\app\\src\\main\\res\\layout\\collected_items.xml"
     },

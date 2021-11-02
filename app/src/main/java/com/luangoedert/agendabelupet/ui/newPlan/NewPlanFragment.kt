@@ -129,8 +129,14 @@ class NewPlanFragment : Fragment() {
                     viewModel.wrongDaySet.postValue(false)
                 } else {
                     if (binding.editTextName.text?.isNotEmpty() == true &&
+                        binding.inputOwnerName.editText?.text?.isNotEmpty() == true &&
                         binding.textRaca.text?.isNotEmpty() == true &&
-                        binding.textEndereco.text?.isNotEmpty() == true
+                        binding.districtText.editText?.text?.isNotEmpty() == true &&
+                        binding.textEndereco.text?.isNotEmpty() == true &&
+                        binding.textWeekDay.editText?.text?.isNotEmpty() == true &&
+                        binding.valueText.editText?.text?.isNotEmpty() == true &&
+                        binding.planText.editText?.text?.isNotEmpty() == true
+
                     ) {
                         var dataQuinzenalText = ""
                         if (binding.planText.editText!!.text.toString() == "Quinzenal") {
